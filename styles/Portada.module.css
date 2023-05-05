@@ -1,0 +1,113 @@
+.inicio {
+    background: #fff url(/fondo.svg) center center/cover no-repeat;
+    height: 100vh;
+    padding-top: 700px;
+    width: 100%;
+  }
+  
+
+.container {
+   display: grid;
+   gap: 650px;
+   padding: 80px; 
+}
+
+
+/* .texto {
+    
+} */
+.texto h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 105px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+
+.texto h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 105px;
+    line-height: 200px;
+
+    color: #FFFFFF;
+}
+
+.texto span {
+    color: #87D6E9;
+    font-weight: 500;
+    font-size: 90px;
+    font-family: 'Inter';
+}
+
+.texto span:before {
+
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 21ch;
+
+    animation: typing 2s steps(12),
+        blink .5s infinite step-end alternate;
+        overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.texto p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 85px;
+
+    color: #FFFFFF;
+}
+
+.botones {
+    display: grid;
+    font-size: 66px;
+    gap: 80px;
+    grid-auto-flow: column;
+    width: fit-content;
+    
+}
+
+.botones .button1 {
+    box-sizing: border-box;
+    background-color: #87D6E9;
+    border: 3px solid #87D6E9;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.botones .button2 {
+    box-sizing: border-box;
+    border: 3px solid #87D6E9;
+    border-radius: 10px;
+    color: #87D6E9;
+    padding: 20px 40px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+
+}
