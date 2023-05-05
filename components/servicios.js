@@ -4,7 +4,7 @@ export default function servicios() {
   return (
     
     <>
-        <h1>Desde servicios</h1>
+        <h2>Desde servicios</h2>
     
     </>
   )
