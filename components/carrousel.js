@@ -10,7 +10,8 @@ export default function carrousel() {
 
             </div>
             <div className={styles.bloque2}>
-                <Image className={styles.imagen} src="/retrato.jpeg" width={650} height={518} alt='imagen logotipo' />
+                <h2>Retrato</h2>
+                <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
             </div>
         </div>
     </div>
