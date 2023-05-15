@@ -6,13 +6,34 @@
   padding-bottom: 100px;
 }
 
-.bloque1 {
-  background-color: aquamarine;
-  width: 418px;
+.contenedorCarrousel {
   height: 518px;
+  width: 418px;
+  overflow: hidden;
 }
 
-.bloque2 {
+.elementoCarrousel {
+  height: 100%;
+  position: relative;
+}
+
+.tarjetas {
+  background-color: aqua;
+  height: 100%;
+}
+
+.flechas {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card {
   background-image: url('/retrato.jpeg');
   background-repeat: no-repeat;
   background-position: -120px 0;
@@ -23,7 +44,7 @@
   height: 518px;
 }
 
-.bloque2 h2{
+.card h2{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -36,7 +57,7 @@
   color: #FFFFFF;
 }
 
-.bloque2 p{
+.card p{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
