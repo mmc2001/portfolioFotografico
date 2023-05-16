@@ -48,8 +48,9 @@ export default function carrousel() {
               </div>
               </div>
             <div className={styles.card}>
-                <h2>Retrato</h2>
-                <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
+              <div className={styles.overlay}></div>
+              <h2>Retrato</h2>
+              <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
             </div>
         </div>
     </div>

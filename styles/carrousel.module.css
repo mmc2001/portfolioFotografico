@@ -1,9 +1,12 @@
 .contenedor {
   background-color: #FFFFFF;
+  height: 518px;
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .contenedorCarrousel {
@@ -34,6 +37,7 @@
 }
 
 .card {
+  position: relative;
   background-image: url('/retrato.jpeg');
   background-repeat: no-repeat;
   background-position: -120px 0;
@@ -45,29 +49,38 @@
 }
 
 .card h2{
+  position: absolute;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
   line-height: 73px;
 
-  text-align: center;
-  margin-top: 80px;
+  margin-left: 225px;
+  margin-top: 120px;
 
   color: #FFFFFF;
 }
 
 .card p{
+  position: absolute;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
   line-height: 28px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 240px;
   padding-left: 60px;
   padding-right: 60px;
 
   color: #FFFFFF;
+}
 
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
 }

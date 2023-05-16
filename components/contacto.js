@@ -11,6 +11,37 @@ export default function contacto() {
   const [asunto, setAsunto] = useState('');
   const [mensaje, setMensaje] = useState('');
 
+  const [error, setError] = useState(false);
+
+  const  handleSubmit = async (e) =>{
+    e.preventDefault()
+
+    //Validación del formulario
+    if([nombre, apellidos, email, asunto, mensaje].includes('')){
+        console.log('Hay al menos un campo vacío')
+        setError(true)
+        return;
+    }
+    setError(false)
+    // const datosCliente = {
+    //     nombre,
+    //     apellidos,
+    //     email,
+    //     asunto,
+    //     mensaje
+    // }
+
+    /* await sendMail(datosCliente) */
+
+    //Reinicir el form
+    setNombre('')
+    setApellidos('')
+    setEmail('')
+    setAsunto('')
+    setMensaje('')
+    
+  }
+
   return (
     <div className={styles.contenedor}>
         <div className={styles.fondo}>
