@@ -28,3 +28,7 @@
   margin: 40px;
   grid-auto-flow: dense;
 }
+
+.imagen {
+  cursor: pointer;
+}

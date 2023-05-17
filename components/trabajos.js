@@ -1,23 +1,101 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, {useState} from 'react'
+/* import ModalImage from 'react-modal-image' */
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 import styles from '../styles/trabajos.module.css'
 
 export default function sobreMi() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const images = [
+      '/retrato.jpeg',
+      '/deporte.jpeg',
+      '/retrato.jpeg',
+      '/retrato.jpeg',
+      '/retrato.jpeg',
+      '/retrato.jpeg',
+      '/retrato.jpeg'
+      // Agrega más rutas de imágenes aquí
+    ];
+  
+    const openLightbox = (index) => {
+      setPhotoIndex(index);
+      setIsOpen(true);
+    };
+
   return (
     <div className={styles.contenedor}>
         <h2>Trabajos de Ejemplo</h2>
         <div className={styles.galeria}>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
-        <img src={"/retrato.jpeg"}/>
+          
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Imagen ${index}`}
+              className={styles.imagen}
+              onClick={() => openLightbox(index)}
+            />
+          ))}
+
+          {/* Renderiza el Lightbox */}
+          {isOpen && (
+            <Lightbox
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => setIsOpen(false)}
+              onMovePrevRequest={() =>
+                setPhotoIndex((photoIndex + images.length - 1) % images.length)
+              }
+              onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
+            />
+          )}
+
+          {/* <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+            showFullscreenButton={true}
+            zoomScale={10}
+          />
+          <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+          />
+          <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+          />
+          <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+          />
+          <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+          />
+          <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+          />
+          <ModalImage 
+            small='/retrato.jpeg'
+            large='/retrato.jpeg'
+            className={styles.imagen}
+            hideDownload={true}
+          /> */}
         </div>
         
     </div>
