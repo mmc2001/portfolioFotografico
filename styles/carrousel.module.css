@@ -6,23 +6,17 @@
   justify-content: center;
   gap: 40px;
   margin-bottom: 100px;
-  overflow: hidden;
 }
 
 .contenedorCarrousel {
-  height: 518px;
-  width: 418px;
-  overflow: hidden;
-}
-
-.elementoCarrousel {
-  height: 100%;
   position: relative;
+  height: 518px;
+  width: auto;
 }
 
-.tarjetas {
-  background-color: aqua;
-  height: 100%;
+.imagenTarjeta{
+  height:100%;
+  width: auto;
 }
 
 .flechas {

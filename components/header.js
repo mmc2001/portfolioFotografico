@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,10 +13,10 @@ export default function Header() {
         <header className={styles.header}>
             <div className={`contenedor ${styles.barra}`}>
                 <Link href={'/'}>
-                        <Image className={styles.logo} src="/logo2.png" width={150} height={40} alt='imagen logotipo' />
+                        <Image className={styles.logo} src="/logo2.svg" width={140} height={40} alt='imagen logotipo' />
                 </Link>
 
-                <nav className={styles.navegacion2} >
+                <nav className={styles.navegacion} >
                     <Link className={ router.pathname === '/' ? styles.active : ''} href="/">Inicio</Link>
 
                     <Link className={ router.pathname === '/servicios' ? styles.active : ''} href="#servicios">Servicios</Link>

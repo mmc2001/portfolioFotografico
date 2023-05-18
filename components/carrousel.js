@@ -1,12 +1,42 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import styles from '../styles/carrousel.module.css'
 
 export default function carrousel() {
+  
+  const images = [
+    '/mujer.jpeg',
+    '/hombre1.jpeg',
+    '/hombre2.jpeg'
+  ];
+
+  const [currentCard, setCurrentCard] = useState(0);
+
+  const goToPreviousCard = () => {
+    setCurrentCard((prevCard) => (prevCard === 0 ? images.length - 1 : prevCard - 1));
+  };
+
+  const goToNextCard = () => {
+    setCurrentCard((prevCard) => (prevCard === images.length - 1 ? 0 : prevCard + 1));
+  };
+
   return (
     <div>
         <div className={styles.contenedor}>  
             <div className={styles.contenedorCarrousel}>
+             
+                <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
+             
+              <div className={styles.flechas}>
+                <div onClick={goToPreviousCard}>
+                  <Image src="/fl-izq.png" width={20} height={20} alt='flecha izquierda' />
+                </div>
+                <div onClick={goToNextCard}>
+                  <Image src="/fl-drc.png" width={20} height={20} alt='flecha derecha' />
+                </div>
+              </div>
+            </div>
+              {/*   FORMA ANTIGUA
               <div className={styles.elementoCarrousel} id="tarjeta1">
                 <div className={styles.tarjetas}>
                   <Image src="/mujer.jpeg" width={518} height={418} alt='persona 1'/>
@@ -46,7 +76,7 @@ export default function carrousel() {
                   </a>
                 </div>
               </div>
-              </div>
+              */}
             <div className={styles.card}>
               <div className={styles.overlay}></div>
               <h2>Retrato</h2>

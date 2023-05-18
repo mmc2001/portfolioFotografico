@@ -38,7 +38,6 @@ export default function sobreMi() {
             />
           ))}
 
-          {/* Renderiza el Lightbox */}
           {isOpen && (
             <Lightbox
               mainSrc={images[photoIndex]}
@@ -51,51 +50,6 @@ export default function sobreMi() {
               onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
             />
           )}
-
-          {/* <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-            showFullscreenButton={true}
-            zoomScale={10}
-          />
-          <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-          />
-          <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-          />
-          <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-          />
-          <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-          />
-          <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-          />
-          <ModalImage 
-            small='/retrato.jpeg'
-            large='/retrato.jpeg'
-            className={styles.imagen}
-            hideDownload={true}
-          /> */}
         </div>
         
     </div>
