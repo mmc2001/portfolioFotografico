@@ -1,0 +1,48 @@
+/* Reset de estilos para elementos de bloque */
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+input,
+textarea,
+legend,
+button,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Reset de estilos para elementos tipográficos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* Restablecer estilos de lista */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Restablecer estilos de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}

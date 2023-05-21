@@ -1,0 +1,39 @@
+.contenedor {
+    margin-top: 40px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.contenedor h2{
+    text-align: center;
+}
+
+.frase1 {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 50px;
+    line-height: 61px;
+
+    color: #000000;
+    margin-left: -60px;
+}
+
+.frase2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #000000;
+    margin-right: -60px;
+}
+
+.bloque {
+    margin-top: 40px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
