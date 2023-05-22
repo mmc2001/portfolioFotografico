@@ -1,3 +1,4 @@
+
 .inicio {
     background: #fff url(/background.png) center center/cover no-repeat;
     height: 100vh;
@@ -17,9 +18,9 @@
 }
 
 .texto h1 {
-    font-family: 'Inter';
+    font-family: var(--fuente);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 86px;
     line-height: 48px;
 
@@ -27,9 +28,9 @@
 }
 
 .texto h2 {
-    font-family: 'Inter';
+    font-family: var(--fuente);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 80px;
     line-height: 200px;
 
@@ -38,9 +39,9 @@
 
 .texto span {
     color: #87D6E9;
-    font-weight: 500;
-    font-size: 105px;
-    font-family: 'Inter';
+    font-size: 125px;
+    font-family: 'Dancing Script';
+    font-style: 'cursive';
 }
 
 .texto span:before {
@@ -62,7 +63,7 @@
 }
 
 .texto p {
-    font-family: 'Inter';
+    font-family: var(--fuente);
     font-style: normal;
     font-weight: 500;
     font-size: 55px;
@@ -85,12 +86,12 @@
     background-color: #79bfd1;
     border: 3px solid #79bfd1;
     border-radius: 40px;
-    font-family: 'Inter';
+    font-family: var(--fuente);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 30px;
     color: #FFFFFF;
-    padding: 20px 40px;
+    padding: 16px 36px;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -101,12 +102,12 @@
     background-color: transparent;
     border: 3px solid #79bfd1;
     border-radius: 40px;
-    font-family: 'Inter';
+    font-family: var(--fuente);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 30px;
     color: #FFFFFF;
-    padding: 20px 40px;
+    padding: 16px 36px;
     text-align: center;
     display: inline-block;
     cursor: pointer;

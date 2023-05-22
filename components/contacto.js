@@ -35,17 +35,18 @@ export default function contacto() {
   }
 
   return (
-    <div className={styles.contenedor} id='contacto'>
+    <div className={styles.contenedor}>
         <div className={styles.fondo}>
           <Image src="/deporte2.png" height={475} width={1440} alt="imagen deporte"/>
         </div>
         <form
+          id='contacto'
           action="https://formsubmit.co/mmcfotografia01@gmail.com" 
           method="POST" 
           className={error ? styles.formulario_error : styles.formulario}>
             <div className={styles.contenido}>
               <div className={styles.filas}> 
-                <h3>Nombre</h3>
+                <h3 style={{marginRight: 126}}>Nombre</h3>
                 <h3>Apellidos</h3>
               </div>
 
@@ -71,7 +72,7 @@ export default function contacto() {
               </div>
 
               <div className={styles.filas}> 
-                <h3>Correo Electrónico</h3>
+                <h3 style={{marginRight: 98}}>Correo Electrónico</h3>
                 <h3>Asunto</h3>
               </div>
 
@@ -85,15 +86,19 @@ export default function contacto() {
                   required
                   className={styles.campo2}>
                 </input>
-                <input type="text" 
-                  name="Asunto" 
-                  placeholder="Asunto" 
-                  size="30" 
+                <select 
+                  name="Asunto"  
                   value={asunto} 
                   onChange= {(e) => setAsunto(e.target.value)}
                   required
-                  className={styles.campo1}>
-                </input>
+                  className={styles.dropdown}>
+            
+                    <option>--- Elegir Servicio ---</option>
+                    <option value="retrato">Retrato</option>
+                    <option value="evento">Evento</option>
+                    <option value="orla">Orla</option>
+                    <option value="deporte">Deporte</option>
+                </select>
               </div>
 
               <div className={styles.filas}> 

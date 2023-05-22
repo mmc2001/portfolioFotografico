@@ -10,7 +10,7 @@
 }
 
 .contenedor h2 {
-  font-family: 'Inter';
+  font-family: var(--fuente);
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
