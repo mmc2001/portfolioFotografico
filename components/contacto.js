@@ -18,20 +18,12 @@ export default function contacto() {
 
     //Validación del formulario
     if([nombre, apellidos, email, asunto, mensaje].includes('')){
-        console.log('Hay al menos un campo vacío')
+        /* console.log('Hay al menos un campo vacío') */
         setError(true)
         return;
     }
-    setError(false)
-    // const datosCliente = {
-    //     nombre,
-    //     apellidos,
-    //     email,
-    //     asunto,
-    //     mensaje
-    // }
 
-    /* await sendMail(datosCliente) */
+    setError(false)
 
     //Reinicir el form
     setNombre('')
@@ -43,11 +35,14 @@ export default function contacto() {
   }
 
   return (
-    <div className={styles.contenedor}>
+    <div className={styles.contenedor} id='contacto'>
         <div className={styles.fondo}>
           <Image src="/deporte2.png" height={475} width={1440} alt="imagen deporte"/>
         </div>
-        <form className={styles.formulario}>
+        <form
+          action="https://formsubmit.co/mmcfotografia01@gmail.com" 
+          method="POST" 
+          className={error ? styles.formulario_error : styles.formulario}>
             <div className={styles.contenido}>
               <div className={styles.filas}> 
                 <h3>Nombre</h3>
@@ -56,7 +51,7 @@ export default function contacto() {
 
               <div className={styles.filas}> 
                 <input type="text" 
-                  name="nombre" 
+                  name="Nombre" 
                   placeholder="Nombre" 
                   size="30" 
                   value={nombre} 
@@ -65,7 +60,7 @@ export default function contacto() {
                   className={styles.campo1}>
                 </input>
                 <input type="text" 
-                  name="apellidos" 
+                  name="Apellidos" 
                   placeholder="Apellidos" 
                   size="30" 
                   value={apellidos} 
@@ -81,8 +76,8 @@ export default function contacto() {
               </div>
 
               <div className={styles.filas}> 
-                <input type="text" 
-                  name="email" 
+                <input type="email" 
+                  name="Email" 
                   placeholder="Email" 
                   size="30" 
                   value={email} 
@@ -91,7 +86,7 @@ export default function contacto() {
                   className={styles.campo2}>
                 </input>
                 <input type="text" 
-                  name="asunto" 
+                  name="Asunto" 
                   placeholder="Asunto" 
                   size="30" 
                   value={asunto} 
@@ -106,7 +101,8 @@ export default function contacto() {
               </div>
 
               <div className={styles.filas}> 
-                <textarea name="mensaje" 
+                <textarea type="text" 
+                    name="Mensaje" 
                     placeholder="Mensaje" 
                     cols="80" 
                     rows="10" 
@@ -121,6 +117,9 @@ export default function contacto() {
             <div className={styles.boton}>
               <input className={styles.submit} type="submit" name="enviar"></input>
             </div>
+            <input type="hidden" name="_next" value="http://localhost:3000/#contacto"/>
+            <input type="hidden" name="_captcha" value="false"></input>
+            <input type="hidden" name="_template" value="box"></input>
         </form>
     </div>
   )

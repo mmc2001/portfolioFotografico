@@ -1,5 +1,5 @@
 .contenedor {
-    margin-top: 50px;
+    margin-top: 20px;
     height: 487px;
     width: 100%;
     display: grid;
@@ -14,13 +14,14 @@
     font-size: 40px;
     line-height: 48px;
     text-align: center;
+    padding-bottom: 20px;
     border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
 
     color: #000000;
 }
 
 .cards {
+    margin-top: 40px;
     display: grid;
     grid-auto-flow: column;
     align-items: center;

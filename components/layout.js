@@ -10,6 +10,7 @@ export default function Layout (){
       <Portada />
       <SobreNosotros />
       <Trabajos />
+      <div id='servicios'></div>
       <Servicios />
       <Contacto />
     </>

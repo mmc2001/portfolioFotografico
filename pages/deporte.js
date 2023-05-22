@@ -1,9 +1,16 @@
 import React from 'react'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+import Carrousel from '@/components/carrousel'
+import Galeria from '@/components/galeria'
 
 export default function deporte() {
   return (
-    <div>
-      <h1>Desde Deporte</h1>
-    </div>
+    <>
+      <Header />
+      <Carrousel/>
+      <Galeria />
+      <Footer />
+    </>
   )
 }

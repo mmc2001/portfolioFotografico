@@ -23,16 +23,16 @@ export default function Header() {
                   <li>
                     <a href="#">Servicios ▼</a>
                       <ul>
-                        <li className={styles.list}><a href="#">Retratos</a></li>
-                        <li className={styles.list}><a href="#">Eventos</a></li>
-                        <li className={styles.list}><a href="#">Orlas</a></li>
-                        <li className={styles.list}><a href="#">Deporte</a></li>
+                        <li className={styles.list}><a href="./retratos">Retratos</a></li>
+                        <li className={styles.list}><a href="./eventos">Eventos</a></li>
+                        <li className={styles.list}><a href="./orlas">Orlas</a></li>
+                        <li className={styles.list}><a href="./deporte">Deporte</a></li>
                       </ul>
                   </li>
 
                   {/* <Link className={ router.pathname === '/servicios' ? styles.active : ''} href="#servicios">Servicios</Link> */}
 
-                  <Link className={ router.pathname === '/contacto' ? styles.active : ''} href="#contacto">Contacto</Link>
+                  <Link className={ router.pathname === '/contacto' ? styles.active : ''} href="./#contacto">Contacto</Link>
                 </nav>
             </div>
         </header>

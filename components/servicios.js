@@ -5,7 +5,7 @@ import page from '../pages/retratos'
 
 export default function servicios() {
   return (
-    
+    <>
     <div className={styles.contenedor}>
         <h2>Servicios</h2>
         <div className={styles.cards}>
@@ -43,5 +43,6 @@ export default function servicios() {
           </a>
         </div>
     </div>
+    </>
   )
 }
