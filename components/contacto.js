@@ -11,19 +11,63 @@ export default function contacto() {
   const [asunto, setAsunto] = useState('');
   const [mensaje, setMensaje] = useState('');
 
-  const [error, setError] = useState(false);
+  const [error1, setError1] = useState(false);
+  const [error2, setError2] = useState(false);
+  const [error3, setError3] = useState(false);
+  const [error4, setError4] = useState(false);
+  const [error5, setError5] = useState(false);
 
   const  handleSubmit = async (e) =>{
     e.preventDefault()
 
     //Validación del formulario
-    if([nombre, apellidos, email, asunto, mensaje].includes('')){
-        /* console.log('Hay al menos un campo vacío') */
-        setError(true)
-        return;
+    if ([nombre, apellidos, email, asunto, mensaje].includes('')) {
+      if ((nombre)==='') {
+        setError1(true)
+        console.log(`Valor error1: ${error1}`)
+      } else {
+        setError1(false)
+        console.log(`Valor error1: ${error1}`)
+      }
+      
+      if ((apellidos)==='') {
+        setError2(true)
+        console.log(`Valor error2: ${error2}`)
+      }else{
+        setError2(false)
+        console.log(`Valor error1: ${error1}`)
+      }
+
+      if ((email)==='') {
+        setError3(true)
+        console.log(`Valor error3: ${error3}`)
+      } else {
+        setError3(false)
+        console.log(`Valor error1: ${error1}`)
+      }
+
+      if ((asunto)==='') {
+        setError4(true)
+        console.log(`Valor error4: ${error4}`)
+      } else {
+        setError4(false)
+        console.log(`Valor error1: ${error1}`)
+      }
+
+      if ((mensaje)==='') {
+        setError5(true)
+        console.log(`Valor error5: ${error5}`)
+      } else {
+        setError5(false)
+      }
+      return;
     }
 
-    setError(false)
+    setError1(false)
+    setError2(false)
+    setError3(false)
+    setError4(false)
+    setError5(false)
 
     //Reinicir el form
     setNombre('')
@@ -42,8 +86,13 @@ export default function contacto() {
         <form
           id='contacto'
           action="https://formsubmit.co/mmcfotografia01@gmail.com" 
-          method="POST" 
-          className={error ? styles.formulario_error : styles.formulario}>
+          method="POST"
+          className={styles.formulario}>
+            {error1||error2||error3||error4||error5 ? (
+              <div>
+                <h4>Todos los campo son obligatorios</h4>
+              </div>
+            ) : ''}
             <div className={styles.contenido}>
               <div className={styles.filas}> 
                 <h3 style={{marginRight: 126}}>Nombre</h3>
@@ -58,7 +107,7 @@ export default function contacto() {
                   value={nombre} 
                   onChange= {(e) => setNombre(e.target.value)}
                   required
-                  className={styles.campo1}>
+                  className={error1 ? styles.error1 : styles.campo1}>
                 </input>
                 <input type="text" 
                   name="Apellidos" 
@@ -67,7 +116,7 @@ export default function contacto() {
                   value={apellidos} 
                   onChange= {(e) => setApellidos(e.target.value)}
                   required
-                  className={styles.campo2}>
+                  className={error2 ? styles.error2 : styles.campo2}>
                 </input>
               </div>
 
@@ -84,16 +133,15 @@ export default function contacto() {
                   value={email} 
                   onChange= {(e) => setEmail(e.target.value)}
                   required
-                  className={styles.campo2}>
+                  className={error3 ? styles.error2 : styles.campo2}>
                 </input>
                 <select 
                   name="Asunto"  
                   value={asunto} 
                   onChange= {(e) => setAsunto(e.target.value)}
                   required
-                  className={styles.dropdown}>
-            
-                    <option>--- Elegir Servicio ---</option>
+                  className={error4 ? styles.dropdown_error : styles.dropdown}>
+                    <option value="">--- Elegir Servicio ---</option>
                     <option value="retrato">Retrato</option>
                     <option value="evento">Evento</option>
                     <option value="orla">Orla</option>
@@ -115,12 +163,14 @@ export default function contacto() {
                     maxLength="1000" 
                     value={mensaje} 
                     onChange= {(e) => setMensaje(e.target.value)}
-                    required>
+                    required
+                    className={error5 ? styles.error : ''}>
                 </textarea>
               </div>
             </div>
+            
             <div className={styles.boton}>
-              <input className={styles.submit} type="submit" name="enviar"></input>
+              <input className={styles.submit} type="submit" name="enviar" onClick={handleSubmit}></input>
             </div>
             <input type="hidden" name="_next" value="http://localhost:3000/#contacto"/>
             <input type="hidden" name="_captcha" value="false"></input>

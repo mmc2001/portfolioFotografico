@@ -72,6 +72,30 @@
   max-width: 30ch;
 }
 
+.subir {
+  opacity: 0;
+  position: fixed;
+  bottom: 10rem;
+  right: 5rem;
+  display: none;
+}
+
+@media (min-height: 315px){
+  .subir {
+    display:block;
+    opacity: 1;
+    position: fixed;
+    bottom: 10rem;
+    right: 5rem;
+  }
+  .subir img {
+    width: 5rem;
+  }
+  .subir img:hover {
+    cursor: pointer;
+  }
+}
+
 .center {
   display: flex;
   justify-content: center;

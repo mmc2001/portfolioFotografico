@@ -21,17 +21,18 @@
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
     margin-top: 300px;
 }
-.formulario_eror input{
-    display: grid;
-    justify-content: center;
-    position: absolute;
-    width: 950px;
-    height: 680px;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
-    margin-top: 300px;
-    
-    border: 1px solid red;
+.formulario h4 {
+    margin-top: 20px;
+    margin-bottom: -60px;
+    font-family: var(--fuente2);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #e52626;
+
+    color: #FFFFFF;
 }
 
 .contenido {
@@ -60,6 +61,18 @@
 
 }
 
+.filas .mensaje_error{
+    font-family: var(--fuente);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #e52626;
+
+    margin-right: 145px;
+}
+
 .filas input::placeholder{
     padding-left: 10px; 
 }
@@ -71,10 +84,27 @@
     padding: 20px;
     width: 100%;
 }
+.filas .error {
+    box-sizing: border-box;
+    border: 1px solid #e52626;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+}
 
 .campo1 {
     box-sizing: border-box;
     border: 1px solid #26C0E5;
+    border-radius: 5px;
+    text-indent: 10px;
+
+    width: 244px;
+    height: 54px;
+}
+.error1{
+    box-sizing: border-box;
+    border: 1px solid #e52626;
+    background-color: #FFFFFF;
     border-radius: 5px;
     text-indent: 10px;
 
@@ -91,10 +121,29 @@
     width: 371px;
     height: 54px;
 }
+.error2{
+    box-sizing: border-box;
+    border: 1px solid #e52626;
+    border-radius: 5px;
+    text-indent: 10px;
+
+    width: 371px;
+    height: 54px;
+}
 
 .dropdown {
     box-sizing: border-box;
     border: 1px solid #26C0E5;
+    border-radius: 5px;
+    text-indent: 10px;
+    text-align: center;
+
+    width: 244px;
+    height: 54px;
+}
+.dropdown_error {
+    box-sizing: border-box;
+    border: 1px solid #e52626;
     border-radius: 5px;
     text-indent: 10px;
     text-align: center;
@@ -121,7 +170,7 @@
     color: #FFFFFF;
 
     background: linear-gradient(0deg, #2860ad 0%, #5fb9e9 100%);
-    border-radius: 10px;
+    border-radius: 6px;
     width: 100%;
     height: 53px;
     cursor: pointer;
@@ -129,3 +178,4 @@
 .submit:hover {
     background: linear-gradient(0deg, #14478e 0%, #50a3c4 100%);
 }
+
