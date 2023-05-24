@@ -3,16 +3,39 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Carrousel from '@/components/carrousel'
 import Galeria from '@/components/galeria'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function retratos() {
 
-  const [scrollTo, setScrollTo] = useState(false);
+  const [mostrarBoton, setMostrarBoton] = useState(false);
 
-  const handleScrollTo = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  useEffect(() => {
+    const handleScroll = () => {
+      const alturaMinima = 100; // La altura a partir de la cual se muestra el botón
+      const scrollActual = window.pageYOffset;
+
+      if (scrollActual > alturaMinima) {
+        setMostrarBoton(true);
+      } else {
+        setMostrarBoton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleClick = () => {
+    scroll.scrollToTop({
+      duration: 1500, // Duración de la animación de desplazamiento
+      smooth: 'easeInOutQuart', // Tipo de animación suave
+    });
   };
 
   return (
@@ -20,9 +43,11 @@ export default function retratos() {
       <Header />
       <Carrousel/>
       <Galeria />
-      <div className={styles.subir}>
-        <Image src="/flecha-hacia-arriba.png" height={75} width={40} alt="imagen deporte" onClick={handleScrollTo}/>
-      </div>
+      {mostrarBoton && (
+        <div className={styles.mostrar}>
+          <Image src="/flecha-hacia-arriba.png" height={75} width={40} alt="imagen deporte" onClick={handleClick} />
+        </div>
+      )}
       <Footer />
     </>
   )

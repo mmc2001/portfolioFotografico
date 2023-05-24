@@ -9,7 +9,7 @@ export default function servicios() {
     <div className={styles.contenedor}>
         <h2>Servicios</h2>
         <div className={styles.cards}>
-          <a href='../pages/retratos'>
+          <a href='./retratos'>
             <div className={styles.card}>
               <div className={styles.overlay}></div>
               <h3>Retratos</h3>
@@ -17,7 +17,7 @@ export default function servicios() {
               <Image href="" className={styles.imagen} src={"/retrato.jpeg"} width={258} height={387} alt='imagen card 1'/>
             </div>
           </a>
-          <a href='../pages/eventos'>
+          <a href='./eventos'>
             <div className={styles.card}>
               <div className={styles.overlay}></div>
               <h3>Eventos</h3>
@@ -25,7 +25,7 @@ export default function servicios() {
               <Image className={styles.imagen} src={"/mujer.jpeg"} width={258} height={387} alt='imagen card 2'/>
             </div>
           </a>
-          <a href='../pages/orlas'>
+          <a href='./orlas'>
             <div className={styles.card}>
               <div className={styles.overlay}></div>
               <h3>Orlas</h3>
@@ -33,7 +33,7 @@ export default function servicios() {
               <Image className={styles.imagen} src={"/deporte.jpeg"} width={258} height={387} alt='imagen card 3'/>
             </div>
           </a>
-          <a href='../pages/deporte'>
+          <a href='./deporte'>
             <div className={styles.card}>
               <div className={styles.overlay}></div>
               <h3>Deporte</h3>

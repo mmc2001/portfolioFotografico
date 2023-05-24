@@ -88,14 +88,16 @@ export default function contacto() {
           action="https://formsubmit.co/mmcfotografia01@gmail.com" 
           method="POST"
           className={styles.formulario}>
+
             {error1||error2||error3||error4||error5 ? (
               <div>
                 <h4>Todos los campo son obligatorios</h4>
               </div>
             ) : ''}
+            
             <div className={styles.contenido}>
               <div className={styles.filas}> 
-                <h3 style={{marginRight: 126}}>Nombre</h3>
+                <h3 className={styles.separacion1}>Nombre</h3>
                 <h3>Apellidos</h3>
               </div>
 
@@ -121,7 +123,7 @@ export default function contacto() {
               </div>
 
               <div className={styles.filas}> 
-                <h3 style={{marginRight: 98}}>Correo Electrónico</h3>
+                <h3 className={styles.separacion2}>Correo Electrónico</h3>
                 <h3>Asunto</h3>
               </div>
 

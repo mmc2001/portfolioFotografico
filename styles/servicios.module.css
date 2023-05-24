@@ -1,6 +1,6 @@
 .contenedor {
     margin-top: 20px;
-    height: 487px;
+    height: 100%;
     width: 100%;
     display: grid;
     justify-content: center;
@@ -21,11 +21,14 @@
 }
 
 .cards {
+    width: 100%;
     margin-top: 40px;
     display: grid;
     grid-auto-flow: column;
-    align-items: center;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
 }
 
 .card {
@@ -88,4 +91,22 @@
 }
 .card:hover .overlay{
     background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        margin-bottom: 60px;
+    }
+    .contenedor h2 {
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+    .card {
+        width: 258px;
+        height: 387px;
+    }
+    .card:hover {
+        opacity: 0;
+    }
+
 }

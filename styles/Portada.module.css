@@ -4,7 +4,7 @@
     height: 100vh;
     padding-top: 200px;
     width: 100%;
-  }
+}
 
 .container {
    display: grid;
@@ -198,5 +198,24 @@
 @keyframes pulse {
     to {
       opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .inicio {
+        padding-top: 160px;
+    }
+    .container {
+        margin: 0px;
+    }
+    .texto h1  {
+        font-size: 66px;
+        line-height: 78px;
+    }
+    .texto span {
+        font-size: 80px;
+    }
+    .text {
+        margin-top: 55px;
     }
 }

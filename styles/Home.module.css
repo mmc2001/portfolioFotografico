@@ -72,27 +72,37 @@
   max-width: 30ch;
 }
 
-.subir {
-  opacity: 0;
+.mostrar {
+  visibility: visible;
   position: fixed;
   bottom: 10rem;
   right: 5rem;
-  display: none;
+  animation: buttonFadeIn 1s ease-in-out;
+}
+.mostrar img {
+  width: 5rem;
+}
+.mostrar img:hover {
+  cursor: pointer;
 }
 
-@media (min-height: 315px){
-  .subir {
-    display:block;
+@keyframes buttonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
-    position: fixed;
-    bottom: 10rem;
-    right: 5rem;
+    transform: translateY(0);
   }
-  .subir img {
-    width: 5rem;
+}
+
+@media (max-width: 768px) {
+  .mostrar {
+    right: 1rem;
   }
-  .subir img:hover {
-    cursor: pointer;
+  .mostrar img {
+    width: 4rem;
   }
 }
 

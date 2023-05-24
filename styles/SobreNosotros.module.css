@@ -1,6 +1,7 @@
 .contenedor {
     margin-top: 40px;
     width: 100%;
+    height: 100%;
     display: grid;
     justify-content: center;
 }
@@ -21,7 +22,7 @@
 }
 
 .frase2 {
-    font-family: var(--);
+    font-family: var(--fuente);
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -34,18 +35,25 @@
     width: 100%;
     height: 100%;
     margin-top: 40px;
-    margin: 40px;
     display: grid;
+    grid-auto-flow: dense;
     gap: 28px;
     justify-content: center;
     align-items: center;
     grid-auto-flow: column;
 }
 
+.imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .textos {
     width: fit-content;
     display: grid;
     gap: 10px;
+    width: 100%;
 }
 
 .textos h3 {
@@ -65,7 +73,7 @@
     color: #000000;
 }
 .textos p {
-    width: 780px;
+    width: 100%;
     word-wrap: break-word;
 
     font-family: var(--fuente2);
@@ -103,4 +111,42 @@
 .button:hover {
     background: #14478e;
     background: linear-gradient(0deg, #14478e 0%, #50a3c4 100%);
+}
+
+@media (max-width: 768px) {
+    .frase1 {
+        font-size: 26px;
+        line-height: 48px;
+        margin-left: 0px;
+    }
+    .frase2 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-right: 0px;
+    }
+    .bloque {
+        margin-top: 50px;
+        gap: 16px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .textos h3 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .textos h4 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .textos p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .imagen{
+        width: 100%;
+    }
+    .button {
+        font-size: 16px;
+        margin-top: 10px;
+    }
 }

@@ -8,8 +8,8 @@ export default function portada() {
       <div className={styles.inicio}>
         <div className={styles.container}>
           <div className={styles.texto}>
-            <h1>Bienvenido a mi</h1>
-            <span>Portfolio</span>
+            <h1>Portfolio Fotográfico</h1>
+            <span>moyanofotografia</span>
           </div>
           <div className={styles.botones}>
             <Link href={"/#contacto"}><button className={styles.button1}>Contactar</button></Link>
