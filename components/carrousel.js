@@ -30,7 +30,7 @@ export default function carrousel() {
           <div className={styles.contenedor}>  
               <div className={styles.contenedorCarrousel}>
                
-                  <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
+                <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
                
                 <div className={styles.flechas}>
                   <div className={styles.f_izq} onClick={goToPreviousCard}>

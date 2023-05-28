@@ -38,7 +38,7 @@
 }
 
 .texto span {
-    color: #87D6E9;
+    color: #82e6ff;
     font-size: 125px;
     font-family: 'Dancing Script';
     font-style: 'cursive';
@@ -182,9 +182,11 @@
 }
   
 .text {
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
     margin-top: 75px;
-    margin-left: -54px;
+    /* margin-left: -54px; */
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -204,18 +206,91 @@
 @media (max-width: 768px) {
     .inicio {
         padding-top: 160px;
+        background-position-x: -166px;
     }
     .container {
-        margin: 0px;
+        margin-top: 240px;
+        padding: 40px; 
+    }
+    .texto {
+        gap: 0px;
     }
     .texto h1  {
-        font-size: 66px;
-        line-height: 78px;
+        font-size: 42px;
+        line-height: 52px;
     }
     .texto span {
-        font-size: 80px;
+        font-size: 50px;
+    }
+    .contenedor {
+        margin-top: 10px;
     }
     .text {
         margin-top: 55px;
+        font-size: 14px;
+    }
+    .chevron {
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+        width: 22px;
+        height: 6px;
+    }
+    .botones {
+        font-size: 46px;
+        gap: 40px;
+    }
+    .botones .button1 {
+        font-size: 26px;
+    }
+    .botones .button2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 320px) {
+    .inicio {
+        padding-top: 140px;
+        height: 140vh;
+        width: 320px;
+    }
+    .container {
+        margin-top: 240px;
+        padding: 40px; 
+    }
+    .texto {
+        gap: 0px;
+    }
+    .texto h1  {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .texto span {
+        font-size: 40px;
+    }
+    .contenedor {
+        margin-top: 10px;
+    }
+    .text {
+        margin-top: 55px;
+        font-size: 14px;
+    }
+    .chevron {
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+        width: 22px;
+        height: 6px;
+    }
+    .botones {
+        grid-auto-flow: row;
+        font-size: 26px;
+        gap: 20px;
+    }
+    .botones .button1 {
+        font-size: 16px;
+    }
+    .botones .button2 {
+        font-size: 16px;
     }
 }

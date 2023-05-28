@@ -8,7 +8,7 @@ export default function portada() {
       <div className={styles.inicio}>
         <div className={styles.container}>
           <div className={styles.texto}>
-            <h1>Portfolio Fotográfico</h1>
+            <h1>Portfolio <br/> Fotográfico</h1>
             <span>moyanofotografia</span>
           </div>
           <div className={styles.botones}>

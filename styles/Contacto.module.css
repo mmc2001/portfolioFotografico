@@ -217,7 +217,7 @@
     }
     .error1{
         height: 44px;
-        width: 204px;
+        width: 244px;
     }
     .campo2 {
         height: 44px;
@@ -237,6 +237,62 @@
         height: 140px;
     }
     .boton {
+        margin-top: -10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contenedor {
+        height: 720px;
+    }
+    .formulario {
+        margin-top: 160px;
+        width: 82%;
+        height: 510px;
+        padding-left: 68px;
+        padding-right: 68px;
+    }
+    .contenido {
+        margin-top: 20px;
+    }
+    .filas h3 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .filas .separacion1 {
+        margin-right: 174px;
+    }
+    .filas .separacion2 {
+        margin-right: 168px;
+    }
+    .campo1 {
+        height: 44px;
+        width: 44px;
+    }
+    .error1{
+        height: 44px;
+        width: 204px;
+    }
+    .campo2 {
+        height: 44px;
+        width: 44px;
+    }
+    .error2{
+        height: 44px;
+        width: 331px;
+    }
+    .dropdown {
+        height: 44px;
+    }
+    .filas textarea {
+        height: 140px;
+        width: 100px;
+    }
+    .filas .error {
+        height: 140px;
+    }
+    .boton {
+        width: 20px;
         margin-top: -10px;
     }
 }

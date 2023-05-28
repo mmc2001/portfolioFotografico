@@ -35,3 +35,13 @@
 .imagen {
   cursor: pointer;
 }
+
+@media (max-width: 320px) {
+  .contenedor h2 {
+    width: 320px;
+    font-size: 20px;
+  }
+  .galeria {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}

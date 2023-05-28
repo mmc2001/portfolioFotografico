@@ -99,7 +99,18 @@
 
 @media (max-width: 768px) {
   .mostrar {
-    right: 1rem;
+    right: 1.3rem;
+    bottom: 8rem;
+  }
+  .mostrar img {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .mostrar {
+    right: 10rem;
+    bottom: 8rem;
   }
   .mostrar img {
     width: 4rem;
