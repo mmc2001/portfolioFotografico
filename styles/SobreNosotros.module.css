@@ -38,11 +38,11 @@
     padding-right: 200px;
     margin-top: 40px;
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     grid-auto-flow: dense;
     gap: 28px;
     justify-content: center;
     align-items: center;
-    grid-auto-flow: column;
 }
 
 .imagen {
@@ -162,16 +162,16 @@
 
 @media (max-width: 320px) {
     .frase1 {
-        font-size: 26px;
-        line-height: 48px;
-        margin-left: 0px;
+        font-size: 12px;
+        line-height: 20px;
+        margin-left: -30px;
     }
     .frase2 {
-        font-size: 20px;
-        line-height: 26px;
-        margin-right: 0px;
+        font-size: 10px;
     }
     .bloque {
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 18px;
         padding-left: 40px;
         padding-right: 40px;

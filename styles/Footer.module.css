@@ -50,14 +50,37 @@
 .navegacion a {
     color: var(--white);
     text-decoration: none;
-    font-size: 2.2rem;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: .5rem;
+    /* padding: .5rem; */
+    padding: 10px;
     transition-property: background-color;
     transition-duration: 300ms;
-    margin-right: 10px;
 }
 .navegacion a:hover {
     color: #d3d3d3;
+}
+
+@media (max-width: 768px) {
+    .header .barra {
+        height: 120px;
+    }
+    .navegacion1 {
+        margin: 0px;
+        gap: 2rem;
+    }
+    .header .barra {
+        height: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        margin-top: -2px;
+    }
+    .header .barra {
+        height: 100px;
+    }
+
 }
