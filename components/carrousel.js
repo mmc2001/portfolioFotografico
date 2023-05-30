@@ -130,6 +130,12 @@ export default function carrousel() {
 
 
 
+
+
+
+
+
+
 {/*   FORMA ANTIGUA
 <div className={styles.elementoCarrousel} id="tarjeta1">
   <div className={styles.tarjetas}>

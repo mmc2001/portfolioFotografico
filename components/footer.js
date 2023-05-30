@@ -20,7 +20,7 @@ export default function Footer() {
                   <Link href="#contacto">Contacto</Link>
               </nav>
               <Link href={'/'}>
-                      <Image className={styles.logo} src="/logo_blanco.svg" width={140} height={40} alt='imagen logotipo' />
+                      <Image className={styles.logo} src="/logo/logo-foto.svg" width={140} height={40} alt='imagen logotipo' />
               </Link>
             </div>
         </footer>

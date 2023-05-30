@@ -13,7 +13,7 @@
 .contenedorCarrousel {
   position: relative;
   height: 518px;
-  width: auto;
+  width: 346px;
 }
 
 .imagenTarjeta{
@@ -111,14 +111,14 @@
   }
   .contenedorCarrousel {
     height: 400px;
-    width: 258px;
+    width: 100%;
   }
   .contenedorCarrousel img {
     object-fit: cover;
   }
   .flechas {
     height: 400px;
-    width: 258px;
+    width: 100%;
   }
   .f_izq:hover {
     opacity: 0;
@@ -150,5 +150,37 @@
     padding-left: 34px;
     padding-right: 34px;
     margin-top: 160px;
+  }
+}
+
+@media (max-width: 320px){
+  .contenedor {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+  }
+  .contenedorCarrousel {
+    margin: 0 auto;
+    height: 400px;
+    width: 90%;
+  }
+  .flechas {
+    height: 400px;
+    width: 90%;
+  }
+  .card {
+    margin: 0 auto;
+    width: 300px;
+  }
+  .card h2{
+    margin-top: 80px;
+  }
+  .card p{
+    margin-top: 120px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }

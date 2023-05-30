@@ -16,15 +16,14 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    width: 80%;
-    height: 80%;
+    width: 80px;
 }
 
 .footer .barra {
     margin: auto;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     align-items: center;
 }
@@ -37,10 +36,10 @@
 }
 
 .navegacion {
-    margin-top: 5rem;
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-left: 10px;
 }
 @media (min-width: 768px) {
     .navegacion {
@@ -53,7 +52,6 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    /* padding: .5rem; */
     padding: 10px;
     transition-property: background-color;
     transition-duration: 300ms;
@@ -80,7 +78,14 @@
         margin-top: -2px;
     }
     .header .barra {
-        height: 100px;
+        height: 80px;
+    }
+    .logo {
+        width: 60px;
+    }
+    .navegacion a {
+        font-size: 10px;
+        padding: 2px;
     }
 
 }

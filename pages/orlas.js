@@ -45,7 +45,7 @@ export default function retratos() {
       <Galeria />
       {mostrarBoton && (
         <div className={styles.mostrar}>
-          <Image src="/flecha-hacia-arriba.png" height={75} width={40} alt="imagen deporte" onClick={handleClick} />
+          <Image src="/flecha.png" height={75} width={40} alt="imagen deporte" onClick={handleClick} />
         </div>
       )}
       <Footer />

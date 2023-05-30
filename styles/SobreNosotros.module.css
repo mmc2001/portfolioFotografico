@@ -4,6 +4,7 @@
     height: 100%;
     display: grid;
     justify-content: center;
+    align-items: center;
 }
 
 .contenedor h2{
@@ -11,6 +12,7 @@
 }
 
 .frase1 {
+    width: 100%;
     font-family: var(--fuente);
     font-style: italic;
     font-weight: 200;
@@ -18,17 +20,16 @@
     line-height: 58px;
 
     color: #000000;
-    margin-left: -60px;
 }
 
 .frase2 {
+    width: 100%;
     font-family: var(--fuente);
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 60px;
     color: #000000;
-    margin-right: -60px;
 }
 
 .bloque {
@@ -38,9 +39,8 @@
     padding-right: 200px;
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     grid-auto-flow: dense;
-    gap: 28px;
     justify-content: center;
     align-items: center;
 }
@@ -54,6 +54,8 @@
 .textos {
     width: fit-content;
     display: grid;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     width: 100%;
 }
@@ -164,7 +166,6 @@
     .frase1 {
         font-size: 12px;
         line-height: 20px;
-        margin-left: -30px;
     }
     .frase2 {
         font-size: 10px;
@@ -177,11 +178,11 @@
         padding-right: 40px;
     }
     .textos h3 {
-        font-size: 32px;
+        font-size: 30px;
         line-height: 36px;
     }
     .textos h4 {
-        font-size: 22px;
+        font-size: 16px;
         line-height: 26px;
     }
     .textos p {

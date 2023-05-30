@@ -12,7 +12,7 @@ export default function Layout (){
       <Trabajos />
       <div id='servicios'></div>
       <Servicios />
-      {/* <Contacto /> */}
+      <Contacto />
     </>
   )
 }

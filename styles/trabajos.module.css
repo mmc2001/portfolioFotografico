@@ -1,9 +1,8 @@
 .contenedor {
   margin-top: 80px;
-  box-sizing: border-box;
-  padding-left: 80px;
-  padding-right: 80px;
+  height: 100%;
   width: 100%;
+  box-sizing: border-box;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -37,11 +36,21 @@
 }
 
 @media (max-width: 320px) {
+  .contenedor {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .contenedor h2 {
-    width: 320px;
+    width: 100%;
     font-size: 20px;
   }
   .galeria {
+    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin: 0px;
+    margin-top: 40px;
+  }
+  .imagen {
+    width: 260px;
   }
 }
