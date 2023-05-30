@@ -98,13 +98,13 @@ export default function contacto() {
             <div className={styles.contenido}>
               <div className={styles.filas}> 
                 <h3 className={styles.separacion1}>Nombre</h3>
-                <h3>Apellidos</h3>
+                <h3 className={styles.separacion2}>Apellidos</h3>
               </div>
 
               <div className={styles.filas}> 
                 <input type="text" 
                   name="Nombre" 
-                  placeholder="Nombre" 
+                  placeholder="nombre" 
                   size="30" 
                   value={nombre} 
                   onChange= {(e) => setNombre(e.target.value)}
@@ -113,7 +113,7 @@ export default function contacto() {
                 </input>
                 <input type="text" 
                   name="Apellidos" 
-                  placeholder="Apellidos" 
+                  placeholder="apellidos" 
                   size="30" 
                   value={apellidos} 
                   onChange= {(e) => setApellidos(e.target.value)}
@@ -124,13 +124,13 @@ export default function contacto() {
 
               <div className={styles.filas}> 
                 <h3 className={styles.separacion2}>Correo Electrónico</h3>
-                <h3>Asunto</h3>
+                <h3 className={styles.separacion1}>Asunto</h3>
               </div>
 
               <div className={styles.filas}> 
                 <input type="email" 
                   name="Email" 
-                  placeholder="Email" 
+                  placeholder="correo@correo.es" 
                   size="30" 
                   value={email} 
                   onChange= {(e) => setEmail(e.target.value)}

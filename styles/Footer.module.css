@@ -80,12 +80,20 @@
     .header .barra {
         height: 80px;
     }
+    .barra{
+        gap: 14%;
+    }
     .logo {
         width: 60px;
+        margin-left: 10%;
+    }
+    .navegacion {
+        gap: 1rem;
+        margin-left: 0px;
     }
     .navegacion a {
         font-size: 10px;
-        padding: 2px;
+        padding: 0px;
     }
 
 }

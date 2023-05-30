@@ -2,18 +2,24 @@
 .contenedor {
   margin-top: 140px;
   background-color: #FFFFFF;  
-  width: 100%;
+  /* width: 100%;
   display: grid;
   align-items: center;
   justify-content: center;
   grid-auto-flow: column;
-  grid-gap: 20px;
+  grid-gap: 20px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4%;
 }
 
 .contenedorCarrousel {
   position: relative;
   height: 518px;
-  width: 346px;
+  /* width: 346px; */
+  width: auto;
 }
 
 .imagenTarjeta{
@@ -108,10 +114,13 @@
 @media (max-width: 768px) {
   .contenedor {
     width: 100%;
+    margin-top: 110px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .contenedorCarrousel {
     height: 400px;
-    width: 100%;
+    width: auto;
   }
   .contenedorCarrousel img {
     object-fit: cover;
@@ -153,23 +162,26 @@
   }
 }
 
-@media (max-width: 320px){
+@media (max-width: 460px){
   .contenedor {
-    margin-top: 90px;
+    /* margin-top: 90px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: 1fr;
     grid-gap: 20px;
-    grid-auto-flow: dense;
+    grid-auto-flow: dense; */
+    width: 100%;
+    margin-top: 110px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .contenedorCarrousel {
-    margin: 0 auto;
     height: 400px;
-    width: 90%;
+    width: auto;
   }
   .flechas {
     height: 400px;
-    width: 90%;
+    width: 100%;
   }
   .card {
     margin: 0 auto;

@@ -83,8 +83,11 @@
 
 .botones .button1 {
     box-sizing: border-box;
-    background-color: #79bfd1;
-    border: 3px solid #79bfd1;
+    background-color: #5b97ff;
+    border: 3px solid #5b97ff;
+    /* border-radius: 3px;
+    border-color: linear-gradient(to top, #1d3035, #4c7f8b, #83d7ec);
+    background: linear-gradient(to top, #1d3035, #4c7f8b, #83d7ec); */
     border-radius: 40px;
     font-family: var(--fuente);
     font-style: normal;
@@ -100,7 +103,7 @@
 .botones .button2 {
     box-sizing: border-box;
     background-color: transparent;
-    border: 3px solid #79bfd1;
+    border: 3px solid #5b97ff;
     border-radius: 40px;
     font-family: var(--fuente);
     font-style: normal;
@@ -250,7 +253,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 460px) {
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
         background-position-x: -286px;
@@ -262,7 +265,7 @@
         padding: 28px; 
     }
     .texto {
-        margin-top: -46px;
+        margin-top: 266px;
         gap: 0px;
     }
     .texto h1  {
@@ -273,7 +276,7 @@
         font-size: 28px;
     }
     .contenedor {
-        margin-top: 10px;
+        margin-top: 40px;
     }
     .text {
         margin-top: 55px;
@@ -300,5 +303,11 @@
     .botones .button2 {
         font-size: 12px;
         padding: 12px 32px;
+    }
+}
+
+@media (max-width: 320px) {
+    .texto {
+        margin-top: 146px;
     }
 }
