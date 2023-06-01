@@ -111,19 +111,20 @@
         height: 80px;
     }
     .logo {
-        margin-left: -10px;
+        width: 90%;
+        margin-left: 1.5rem;
     }
     .navegacion1 {
         margin: 0px;
         gap: 2rem;
     }
     .navegacion1 a {
-        font-size: 12px;
+        font-size: 1.75rem;
         padding: 6px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
     .header {
         margin-top: -2px;
     }

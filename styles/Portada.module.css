@@ -8,11 +8,11 @@
 .container {
    display: grid;
    gap: 20px;
-   padding: 80px; 
+   padding: 4rem; 
 }
 
 .texto {
-    margin-top: 320px;
+    margin-top: 36rem;
     display: grid;
     gap: 20px;
 }
@@ -25,6 +25,19 @@
     line-height: 100px;
 
     color: #FFFFFF;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .texto h2 {
@@ -79,6 +92,17 @@
     grid-auto-flow: column;
     width: fit-content;
     
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
 }
 
 .botones .button1 {
@@ -118,7 +142,7 @@
 
 .contenedor {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 2.75rem;
     display: grid;
     justify-content: center;
 }
@@ -209,26 +233,27 @@
 @media (max-width: 768px) {
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
-        height: 100vh;
-        background-position-x: -260px;
+        height: 85vh;
+        background-position-x: -220px;
     }
     .container {
-        margin-top: 0px;
-        padding: 40px; 
+        margin-top: 4rem;
+        padding: 2.75rem; 
     }
     .texto {
+        margin-top: 26rem;
         gap: 0px;
     }
     .texto h1  {
         margin-top: 180px;
-        font-size: 42px;
-        line-height: 52px;
+        font-size: 6.5rem;
+        line-height: 8rem;
     }
     .texto span {
         font-size: 50px;
     }
     .contenedor {
-        margin-top: 50px;
+        margin-top: 3rem;
     }
     .text {
         margin-top: 55px;
@@ -257,26 +282,26 @@
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
         background-position-x: -286px;
-        height: 100vh;
+        height: 82vh;
         width: 100%;
 
     }
     .container {
-        padding: 28px; 
+        padding: 2rem; 
     }
     .texto {
-        margin-top: 266px;
+        margin-top: 20rem;
         gap: 0px;
     }
     .texto h1  {
-        font-size: 22px;
-        line-height: 34px;
+        font-size: 4rem;
+        line-height: 4.75rem;
     }
     .texto span {
         font-size: 28px;
     }
     .contenedor {
-        margin-top: 40px;
+        margin-top: 2.25rem;
     }
     .text {
         margin-top: 55px;
