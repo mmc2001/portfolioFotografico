@@ -30,10 +30,10 @@
 }
 .pricingTableFirstTable_table {
   vertical-align: middle;
-  width: 31%;
+  width: 36%;
   background-color: #ffffff;
   display: inline-block;
-  padding: 0px 30px 40px;
+  padding: 0px 20px 40px;
   text-align: center;
   max-width: 320px;
   transition: all 0.3s ease;
@@ -89,36 +89,36 @@
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  .pricingTableFirstTable_table:nth-of-type(2) h1 {
+  .pricingTableFirstTable_table:nth-of-type(3) h1 {
     padding-top: 8%;
   }
 }
-.pricingTableFirstTable_table:nth-of-type(2):before {
-  content: "Most Popular";
+.pricingTableFirstTable_table:nth-of-type(3):before {
+  content: "Más Popular";
   position: absolute;
   color: white;
   display: block;
   background-color: #3bbdee;
   text-align: center;
   right: 15px;
-  top: -25px;
+  top: -20px;
   height: 65px;
   width: 65px;
   border-radius: 50%;
   box-sizing: border-box;
   font-size: 0.5em;
-  padding-top: 22px;
+  padding-top: 16px;
   text-transform: uppercase;
   letter-spacing: 0.13em;
   transition: all 0.5s ease;
 }
 @media screen and (max-width: 988px) {
-  .pricingTableFirstTable_table:nth-of-type(2):before {
+  .pricingTableFirstTable_table:nth-of-type(3):before {
     font-size: 0.6em;
   }
 }
 @media screen and (max-width: 767px) {
-  .pricingTableFirstTable_table:nth-of-type(2):before {
+  .pricingTableFirstTable_table:nth-of-type(3):before {
     left: 10px;
     width: 45px;
     height: 45px;
@@ -127,11 +127,11 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .pricingTableFirstTable_table:nth-of-type(2):before {
+  .pricingTableFirstTable_table:nth-of-type(3):before {
     font-size: 0.8em;
   }
 }
-.pricingTableFirstTable_table:nth-of-type(2):hover:before {
+.pricingTableFirstTable_table:nth-of-type(3):hover:before {
   transform: rotate(360deg);
 }
 .pricingTableFirstTable_table__header {
@@ -165,6 +165,40 @@
     float: none;
     width: 100%;
     font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+}
+.pricingTableFirstTable_table__paragraph {
+  font-size: 0.75em;
+  padding: 10px 0px;
+  border-bottom: 2px solid #ebedec;
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 1068px) {
+  .pricingTableFirstTable_table__paragraph {
+    font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pricingTableFirstTable_table__paragraph {
+    padding: 0px;
+    border-bottom: none;
+    float: left;
+    width: 33%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .pricingTableFirstTable_table__paragraph {
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pricingTableFirstTable_table__paragraph {
+    float: none;
+    width: 100%;
+    font-size: 0.8em;
     margin-bottom: 5px;
   }
 }
@@ -227,6 +261,7 @@
   padding: 15px;
   font-size: 0.9em;
   border-bottom: 2px solid #ebedec;
+  /* padding-left: 30px;  */
 }
 @media screen and (max-width: 1068px) {
   .pricingTableFirstTable_table__options {
@@ -254,7 +289,9 @@
   }
 }
 .pricingTableFirstTable_table__options > li {
+  text-align: left;
   padding: 8px 0px;
+  /* text-indent: -30px; */
 }
 @media screen and (max-width: 767px) {
   .pricingTable-firstTable_table__options > li {
@@ -276,7 +313,7 @@
   display: inline-flex;
   margin-right: 15px;
   color: white;
-  background-color: #74ce6a;
+  background-color: #5b97ff;
   border-radius: 50%;
   width: 15px;
   height: 15px;
@@ -301,12 +338,12 @@
 .pricingTableFirstTable_table__getstart {
   color: white;
   border: 0;
-  background-color: #71ce73;
+  background-color: #5b97ff;
   margin-top: 30px;
   border-radius: 5px;
   cursor: pointer;
   padding: 15px;
-  box-shadow: 0px 3px 0px 0px #66ac64;
+  box-shadow: 0px 3px 0px 0px #4676c8;
   letter-spacing: 0.07em;
   transition: all 0.4s ease;
 }
@@ -335,7 +372,7 @@
 }
 .pricingTableFirstTable_table__getstart:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
+  box-shadow: 0px 40px 29px -19px rgba(91, 151, 255, 0.9);
 }
 @media screen and (max-width: 767px) {
   .pricingTableFirstTable_table__getstart:hover {
@@ -344,7 +381,7 @@
   }
 }
 .pricingTableFirstTable_table__getstart:active {
-  box-shadow: inset 0 0 10px 1px #66a564, 0px 40px 29px -19px rgba(102, 172, 100, 0.95);
+  box-shadow: inset 0 0 10px 1px #5b97ff, 0px 40px 29px -19px rgba(102, 172, 100, 0.95);
   transform: scale(0.95) translateY(-9px);
 }
 @media screen and (max-width: 767px) {
