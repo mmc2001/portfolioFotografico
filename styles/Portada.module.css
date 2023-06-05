@@ -255,7 +255,7 @@
         font-size: 50px;
     }
     .contenedor {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
     .text {
         margin-top: 55px;
@@ -283,8 +283,8 @@
 @media (max-width: 460px) {
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
-        background-position-x: -236px;
-        height: 66vh;
+        background-position-x: -210px;
+        height: 62vh;
         width: 100vw;
 
     }
@@ -303,7 +303,7 @@
         font-size: 28px;
     }
     .contenedor {
-        margin-top: 0rem;
+        margin-top: 2rem;
     }
     .text {
         margin-top: 50px;
@@ -332,8 +332,12 @@
     } 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
+    .container {
+        padding: 0.75rem; 
+        margin-left: 6px;
+    }
     .texto {
-        margin-top: 146px;
+        margin-top: 75px;
     }
 }

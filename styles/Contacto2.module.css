@@ -238,6 +238,9 @@
     .formulario h4.mensaje_error{
         width: 80vw;
     }
+    .formulario h4.mensaje_exitoso{
+        width: 80vw;
+    }
     .input, .section {
         width: 80vw;
     }
