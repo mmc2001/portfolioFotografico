@@ -6,7 +6,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Carrousel from '@/components/carrousel'
 import Galeria from '@/components/galeria'
-import Precios from '@/components/precios'
+import Precios2 from '@/components/precios2'
 import styles from '../styles/Home.module.css'
 
 export default function retratos() {
@@ -43,7 +43,7 @@ export default function retratos() {
     <>
       <Header />
       <Carrousel/>
-      <Precios />
+      <Precios2 />
       <Galeria />
       {mostrarBoton && (
         <div className={styles.mostrar}>

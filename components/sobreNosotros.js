@@ -22,7 +22,9 @@ export default function sobreNosotros() {
                         Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. 
                         Est accusantium repudiandae et consequatur eligendi est autem libero.
                     </p>
-                    <Link href={"/#contacto"}><button className={styles.button}>Contactar</button></Link>
+                    <div>
+                        <Link href={"/#contacto"}><button className={styles.button}>Contactar</button></Link>
+                    </div>
                 </div>
             </div>
         </div>
