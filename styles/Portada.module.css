@@ -283,54 +283,53 @@
 @media (max-width: 460px) {
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
-        background-position-x: -286px;
-        height: 82vh;
-        width: 100%;
+        background-position-x: -236px;
+        height: 66vh;
+        width: 100vw;
 
     }
     .container {
         padding: 2rem; 
     }
     .texto {
-        margin-top: 20rem;
+        margin-top: 10rem;
         gap: 0px;
     }
     .texto h1  {
-        font-size: 4rem;
-        line-height: 4.75rem;
+        font-size: 3rem;
+        line-height: 4.55rem;
     }
     .texto span {
         font-size: 28px;
     }
-    /* .contenedor {
-        margin-top: 2.25rem;
-    } */
-    .text {
-        margin-top: 55px;
-        font-size: 14px;
+    .contenedor {
+        margin-top: 0rem;
     }
-    /* .chevron {
+    .text {
+        margin-top: 50px;
+        font-size: 12px;
+    }
+    .chevron {
         display: flex;
         justify-content: center;
-        margin-top: -10px;
-        width: 22px;
-        height: 6px;
-    } */
+        width: 16px;
+        height: 4px;
+    } 
     .botones {
         grid-auto-flow: column; 
         justify-content: center;
         align-items: center;
-        /* font-size: 26px;
-        gap: 16px; */
+        font-size: 26px;
+        gap: 16px;
     }
-    /* .botones .button1 {
+     .botones .button1 {
         font-size: 12px;
         padding: 12px 32px;
     }
     .botones .button2 {
         font-size: 12px;
         padding: 12px 32px;
-    } */
+    } 
 }
 
 @media (max-width: 320px) {

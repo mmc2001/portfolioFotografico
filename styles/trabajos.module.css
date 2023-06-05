@@ -1,6 +1,5 @@
 .contenedor {
-  margin-top: 100px;
-  height: 100%;
+  margin-top: 20px;
   width: 100%;
   box-sizing: border-box;
   display: grid;
@@ -9,6 +8,7 @@
 }
 
 .contenedor h2 {
+  width: 100%;
   font-family: var(--fuente);
   font-style: normal;
   font-weight: 400;
@@ -37,6 +37,7 @@
 
 @media (max-width: 460px) {
   .contenedor {
+    margin-top: 10vw;
     padding-left: 0px;
     padding-right: 0px;
   }
