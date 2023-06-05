@@ -1,7 +1,6 @@
 .contenedor {
     margin-top: 20px;
-    height: 100%;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     display: grid;
     align-items: center;
@@ -9,6 +8,7 @@
 }
 
 .contenedor h2 {
+    width: 100vw;
     font-family: var(--fuente);
     font-style: normal;
     font-weight: 400;
@@ -24,12 +24,17 @@
 .cards {
     width: 100%;
     margin-top: 40px;
-    display: grid;
+
+    /* display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     grid-gap: 20px;
-    /* grid-auto-flow: dense; */
 }
 
 .card {

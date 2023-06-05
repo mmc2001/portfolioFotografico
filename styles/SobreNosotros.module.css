@@ -1,6 +1,6 @@
 .contenedor {
-    margin-top: 4rem;
-    width: 100%;
+    margin-top: 6rem;
+    width: 100vw;
     height: 100%;
     display: grid;
     justify-content: center;
@@ -28,32 +28,32 @@
 }
 
 .frase1 {
-    width: 100%;
+    width: 100vw;
     font-family: var(--fuente);
     font-style: italic;
     font-weight: 200;
-    font-size: 46px;
+    font-size: 42px;
     line-height: 58px;
 
     color: #000000;
 }
 
 .frase2 {
-    width: 100%;
+    width: 100vw;
     font-family: var(--fuente);
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 60px;
     color: #000000;
 }
 
 .bloque {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding-left: 200px;
     padding-right: 200px;
-    margin-top: 40px;
+    margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     grid-auto-flow: dense;
@@ -105,20 +105,18 @@
 }
 
 .button {
+    background-color: #ffffff;
     border: 2px solid #5b97ff;
-    padding: 0.75em 1em;
+    padding: 0.75em 2em;
     border-radius: 2.5em;
     cursor: pointer;
     transition: all 0.25s;
     /* margin: 1em auto; */
     box-sizing: border-box;
-    max-width: 70%;
-    display: block;
     font-family: var(--fuente2);
     font-weight: 500;
     font-size: 20px;
     margin-top: 20px;
-    padding: 10px 25px;
     width: fit-content;
 }
 .button:hover {
