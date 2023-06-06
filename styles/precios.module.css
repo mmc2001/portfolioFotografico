@@ -40,6 +40,7 @@
 .plan {
   background: white;
   width: 20em;
+  /* height: 1020px; */
   box-sizing: border-box;
   text-align: center;
   margin: 1em;
@@ -94,6 +95,9 @@
   padding-left: 0;
   text-align: left;
 }
+.disabled {
+  pointer-events: none;
+}
 .plan .infoContainer .features li {
   padding: 0.5em;
 }
@@ -112,7 +116,23 @@
   display: block;
   font-weight: 700;
 }
+.selectPlan {
+  border: 2px solid #5b97ff;
+  padding: 0.75em 1em;
+  border-radius: 2.5em;
+  cursor: pointer;
+  transition: all 0.25s;
+  margin: 1em auto;
+  box-sizing: border-box;
+  max-width: 70%;
+  display: block;
+  font-weight: 700;
+}
 .plan .infoContainer .selectPlan:hover {
+  background-color: #5b97ff;
+  color: white;
+}
+.selectPlan:hover {
   background-color: #5b97ff;
   color: white;
 }

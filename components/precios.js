@@ -42,9 +42,35 @@ export default function precios() {
     const [premium, setPremium] = useState(false);
 
     /* Mostrar/Ocultar el formulario */
-    const handleSelect = async (e) => {
-        e.preventDefault()
+    const handleSelect = async (id) => {
+        event.preventDefault()
         setMostrar(true)
+
+        /* Control del tipo de pack en el formulario */
+        if(id==='digital'){
+            setDigital(true)
+            setBasico(false)
+            setEstandar(false)
+            setPremium(false)
+          }
+          if(id==='basico'){
+            setBasico(true)
+            setDigital(false)
+            setEstandar(false)
+            setPremium(false)
+          }
+          if(id==='estandar'){
+            setEstandar(true)
+            setDigital(false)
+            setBasico(false)
+            setPremium(false)
+          }
+          if(id==='premium'){
+            setPremium(true)
+            setDigital(false)
+            setBasico(false)
+            setEstandar(false)
+          }
     }
 
     /* Extras Disponibles */
@@ -206,7 +232,7 @@ export default function precios() {
                                 <div className={styles.checkmark}></div>
                             </label>
                         </li>
-                    </ul><a className={styles.selectPlan} onClick={handleSelect}>Seleccionar Pack</a>
+                    </ul><a className={styles.selectPlan} onClick={() => handleSelect('digital')}>Seleccionar Pack</a>
                 </div>
             </div>
             <div className={styles.plan}>
@@ -264,7 +290,7 @@ export default function precios() {
                                 <div className={styles.checkmark}></div>
                             </label>
                         </li>
-                    </ul><a className={styles.selectPlan} onClick={handleSelect}>Seleccionar Pack</a>
+                    </ul><a className={styles.selectPlan} onClick={() => handleSelect('basico')}>Seleccionar Pack</a>
                 </div>
             </div>
             <div className={styles.plan}>
@@ -323,7 +349,7 @@ export default function precios() {
                                 <div className={styles.checkmark}></div>
                             </label>
                         </li>
-                    </ul><a className={styles.selectPlan} onClick={handleSelect}>Seleccionar Pack</a>
+                    </ul><a className={styles.selectPlan} onClick={() => handleSelect('estandar')}>Seleccionar Pack</a>
                 </div>
             </div>
             <div className={styles.plan}>
@@ -346,9 +372,16 @@ export default function precios() {
                         <li>✔ Archivos en Formato Digital</li>
                     </ul>
                 </div>
-                <div className={styles.infoContainer}>
+                <div className={styles.titleContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={styles.features}>
+                    <ul className={orla ? `${styles.features} ${styles.disabled}` : 
+                                beca ? `${styles.features} ${styles.disabled}` : 
+                                orlin ? `${styles.features} ${styles.disabled}` :
+                                lote1 ? `${styles.features} ${styles.disabled}` :
+                                lote2 ? `${styles.features} ${styles.disabled}` :
+                                lote3 ? `${styles.features} ${styles.disabled}` :
+                                lote4 ? `${styles.features} ${styles.disabled}` :
+                                styles.features}>
                         <li>
                             <span>+ </span>Lote 1
                             <label className={styles.container}>
@@ -377,7 +410,7 @@ export default function precios() {
                                 <div className={styles.checkmark}></div>
                             </label>
                         </li>
-                    </ul><a className={styles.selectPlan} onClick={handleSelect}>Seleccionar Pack</a>
+                    </ul><a className={styles.selectPlan} onClick={() => handleSelect('premium')}>Seleccionar Pack</a>
                 </div>
             </div>
         </div>
@@ -424,18 +457,47 @@ export default function precios() {
                             <label className={styles.user_label}>Email</label>
                         </div>
                         <div className={styles.section_group}>
-                            <select 
-                                name="Pack" 
-                                value={pack} 
-                                onChange= {(e) => setPack(e.target.value)} 
-                                id='options'
-                                required
-                                className={error4 ? styles.section_error : styles.section}>
-                                <option value="digital">Pack Digital</option>
-                                <option value="basico" selected>Pack Básico</option>
-                                <option value="estandar">Pack Estándar</option>
-                                <option value="premium">Pack Premium</option>
-                            </select>  
+                            {digital ? (
+                                <select 
+                                    name="Pack" 
+                                    value={pack} 
+                                    onChange= {(e) => setPack(e.target.value)} 
+                                    id='options'
+                                    required
+                                    className={error4 ? styles.section_error : styles.section}>
+                                        <option value="digital">Pack Digital</option>
+                                </select>) : ''} 
+                            {basico ? (
+                                <select 
+                                    name="Pack" 
+                                    value={pack} 
+                                    onChange= {(e) => setPack(e.target.value)} 
+                                    id='options'
+                                    required
+                                    className={error4 ? styles.section_error : styles.section}>
+                                        <option value="basico">Pack Básico</option>
+                                </select>) : ''} 
+                            {estandar ? (
+                                <select 
+                                    name="Pack" 
+                                    value={pack} 
+                                    onChange= {(e) => setPack(e.target.value)} 
+                                    id='options'
+                                    required
+                                    className={error4 ? styles.section_error : styles.section}>
+                                        <option value="estandar">Pack Estándar</option>
+                                </select>) : ''} 
+                            {premium ? (
+                                <select 
+                                    name="Pack" 
+                                    value={pack} 
+                                    onChange= {(e) => setPack(e.target.value)} 
+                                    id='options'
+                                    required
+                                    className={error4 ? styles.section_error : styles.section}>
+                                        <option value="premium">Pack Premium</option>
+                                </select>) : ''} 
+    
                             <label className={styles.user_label}>Pack</label>
                         </div>
                         <div>
@@ -515,3 +577,21 @@ export default function precios() {
     </>
   )
 }
+
+
+
+
+{/*
+<select 
+                                name="Pack" 
+                                value={pack} 
+                                onChange= {(e) => setPack(e.target.value)} 
+                                id='options'
+                                required
+                                className={error4 ? styles.section_error : styles.section}>
+                                    <option value="digital">Pack Digital</option>
+                                    <option value="basico">Pack Básico</option>
+                                    <option value="estandar">Pack Estándar</option>
+                                    <option value="premium">Pack Premium</option>
+                            </select>
+*/}
