@@ -7,7 +7,7 @@ export default function contacto2() {
   const [nombre, setNombre] = useState('');
   const [apellidos, setApellidos] = useState('');
   const [email, setEmail] = useState('');
-  const [servicio, setAsunto] = useState('');
+  const [servicio, setServicio] = useState('');
   const [mensaje, setMensaje] = useState('');
 
   const [error1, setError1] = useState(false);
@@ -15,6 +15,8 @@ export default function contacto2() {
   const [error3, setError3] = useState(false);
   const [error4, setError4] = useState(false);
   const [error5, setError5] = useState(false);
+
+  const [exito, setExito] = useState(false);
 
   const  handleSubmit = async (e) =>{
     e.preventDefault()
@@ -69,6 +71,8 @@ export default function contacto2() {
     setError4(false)
     setError5(false)
 
+    setExito(true)
+
     //Reinicir el form
     setNombre('')
     setApellidos('')
@@ -98,11 +102,14 @@ export default function contacto2() {
           <div>
             <h4 className={styles.mensaje_error}>Todos los campo son obligatorios</h4>
           </div>
-        ) : (
+        ) : ''}
+
+        {exito ? (
           <div>
             <h4 className={styles.mensaje_exitoso}>Correo enviado correctamente</h4>
           </div>
-        )}
+        ) : ''}
+
 
         <div className={styles.input_group}>
             <input required type="text" name="Nombre"
@@ -123,7 +130,7 @@ export default function contacto2() {
             <select 
                 name="Servicio" 
                 value={servicio} 
-                onChange= {(e) => setAsunto(e.target.value)} 
+                onChange= {(e) => setServicio(e.target.value)} 
                 required
                 className={error4 ? styles.section_error : styles.section}>
                   <option value="">-- Elegir Servicio --</option>
