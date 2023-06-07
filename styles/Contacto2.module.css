@@ -263,6 +263,15 @@
     }
 }
 
+@media (max-width: 768px) {
+    .textarea {
+        width: 80vw;
+    }
+    .submit {
+        width: 80vw;
+    }
+}
+
 @media (max-width: 460px) {
     .formulario {
         width: 100%;

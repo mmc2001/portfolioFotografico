@@ -44,12 +44,13 @@
   .contenedor h2 {
     width: 100%;
     font-size: 20px;
+    padding-bottom: 10px;
   }
   .galeria {
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     margin: 0px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .imagen {
     width: 260px;

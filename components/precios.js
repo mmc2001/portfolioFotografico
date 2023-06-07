@@ -44,7 +44,17 @@ export default function precios() {
     /* Mostrar/Ocultar el formulario */
     const handleSelect = async (id) => {
         event.preventDefault()
+        // mostrar ? setMostrar(false) : setMostrar(true)
         setMostrar(true)
+
+        /* Reinicio de checkbox */
+        setOrla(false)
+        setBeca(false)
+        setOrlin(false)
+        setLote1(false)
+        setLote2(false)
+        setLote3(false)
+        setLote4(false)
 
         /* Control del tipo de pack en el formulario */
         if(id==='digital'){
@@ -99,9 +109,6 @@ export default function precios() {
     /* Envío de formulario */
     const  handleSubmit = async (e) => {
       e.preventDefault()
-
-      setMostrar(true)
-  
       //Validación del formulario
       if ([nombre, apellidos, email, pack, mensaje].includes('')) {
         if ((nombre)==='') {
@@ -189,7 +196,15 @@ export default function precios() {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={styles.features}>
+                    <ul className={digital ? styles.features : (
+                                orla ? `${styles.features} ${styles.disabled}` : 
+                                beca ? `${styles.features} ${styles.disabled}` : 
+                                orlin ? `${styles.features} ${styles.disabled}` :
+                                lote1 ? `${styles.features} ${styles.disabled}` :
+                                lote2 ? `${styles.features} ${styles.disabled}` :
+                                lote3 ? `${styles.features} ${styles.disabled}` :
+                                lote4 ? `${styles.features} ${styles.disabled}` :
+                                styles.features)}>
                         <li>
                             <span>+ </span> Orla
                             <label className={styles.container}>
@@ -254,7 +269,15 @@ export default function precios() {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={styles.features}>
+                    <ul className={basico ? styles.features : (
+                                orla ? `${styles.features} ${styles.disabled}` : 
+                                beca ? `${styles.features} ${styles.disabled}` : 
+                                orlin ? `${styles.features} ${styles.disabled}` :
+                                lote1 ? `${styles.features} ${styles.disabled}` :
+                                lote2 ? `${styles.features} ${styles.disabled}` :
+                                lote3 ? `${styles.features} ${styles.disabled}` :
+                                lote4 ? `${styles.features} ${styles.disabled}` :
+                                styles.features)}>
                         <li>
                             <span>+ </span>Orlín
                             <label className={styles.container}>
@@ -313,7 +336,15 @@ export default function precios() {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={styles.features}>
+                    <ul className={estandar ? styles.features : (
+                                orla ? `${styles.features} ${styles.disabled}` : 
+                                beca ? `${styles.features} ${styles.disabled}` : 
+                                orlin ? `${styles.features} ${styles.disabled}` :
+                                lote1 ? `${styles.features} ${styles.disabled}` :
+                                lote2 ? `${styles.features} ${styles.disabled}` :
+                                lote3 ? `${styles.features} ${styles.disabled}` :
+                                lote4 ? `${styles.features} ${styles.disabled}` :
+                                styles.features)}>
                         <li>
                             <span>+ </span>Orlín
                             <label className={styles.container}>
@@ -374,14 +405,15 @@ export default function precios() {
                 </div>
                 <div className={styles.titleContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={orla ? `${styles.features} ${styles.disabled}` : 
+                    <ul className={premium ? styles.features : (
+                                orla ? `${styles.features} ${styles.disabled}` : 
                                 beca ? `${styles.features} ${styles.disabled}` : 
                                 orlin ? `${styles.features} ${styles.disabled}` :
                                 lote1 ? `${styles.features} ${styles.disabled}` :
                                 lote2 ? `${styles.features} ${styles.disabled}` :
                                 lote3 ? `${styles.features} ${styles.disabled}` :
                                 lote4 ? `${styles.features} ${styles.disabled}` :
-                                styles.features}>
+                                styles.features)}>
                         <li>
                             <span>+ </span>Lote 1
                             <label className={styles.container}>
@@ -426,6 +458,7 @@ export default function precios() {
                     <form 
                         action="https://formsubmit.co/moisesmoyanoc@gmail.com" 
                         method="POST"
+                        id='formulario'
                         className={styles.formulario}>
 
                         {error1||error2||error3||error4||error5 ? (
@@ -481,7 +514,7 @@ export default function precios() {
                                 <select 
                                     name="Pack" 
                                     value={pack} 
-                                    onChange= {(e) => setPack(e.target.value)} 
+                                    onChange= {(e) => setPack(e.target.value)}  
                                     id='options'
                                     required
                                     className={error4 ? styles.section_error : styles.section}>
@@ -490,14 +523,14 @@ export default function precios() {
                             {premium ? (
                                 <select 
                                     name="Pack" 
-                                    value={pack} 
+                                    value={pack}  
                                     onChange= {(e) => setPack(e.target.value)} 
                                     id='options'
                                     required
                                     className={error4 ? styles.section_error : styles.section}>
                                         <option value="premium">Pack Premium</option>
                                 </select>) : ''} 
-    
+                                
                             <label className={styles.user_label}>Pack</label>
                         </div>
                         <div>
