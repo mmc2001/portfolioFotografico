@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from '../styles/Contacto2.module.css'
-import axios from 'axios';
 
 
 export default function contacto2() {
@@ -115,17 +114,17 @@ export default function contacto2() {
 
 
         <div className={styles.input_group}>
-            <input /* required */ type="text" name="Nombre"
+            <input required type="text" name="Nombre"
               className={error1 ? styles.input_error : styles.input} value={nombre} onChange= {(e) => setNombre(e.target.value)}/>
             <label className={styles.user_label}>Nombre</label>
         </div>
         <div className={styles.input_group}>
-            <input /* required */ type="text" name="Apellidos"
+            <input required type="text" name="Apellidos"
               className={error2 ? styles.input_error : styles.input} value={apellidos} onChange= {(e) => setApellidos(e.target.value)}/>
             <label className={styles.user_label}>Apellidos</label>
         </div>
         <div className={styles.input_group}>
-            <input /* required */ type="email" name="Email" 
+            <input required type="email" name="Email" 
             className={error3 ? styles.input_error : styles.input} value={email} onChange= {(e) => setEmail(e.target.value)}/>
             <label className={styles.user_label}>Email</label>
         </div>
@@ -134,7 +133,7 @@ export default function contacto2() {
                 name="Servicio" 
                 value={servicio} 
                 onChange= {(e) => setServicio(e.target.value)} 
-                /* required */
+                required
                 className={error4 ? styles.section_error : styles.section}>
                   <option value="">-- Elegir Servicio --</option>
                   <option value="retrato">Retrato</option>
@@ -151,7 +150,7 @@ export default function contacto2() {
                 maxLength="1000"
                 value={mensaje} 
                 onChange= {(e) => setMensaje(e.target.value)} 
-                /* required */
+                required
                 className={error5 ? styles.textarea_error : styles.textarea}>
             </textarea>
             <label className={styles.user_label}>Mensaje</label>

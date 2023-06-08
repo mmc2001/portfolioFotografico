@@ -22,7 +22,7 @@ export default function contacto2() {
     e.preventDefault()
     console.log('Holaaa')
 
-    //Validación del formulario
+    //Validación del formulario - NO LO EJECUTA EL onSubmit, tiene que ser con onClick pero entonces no lanza el form
     if ([nombre, apellidos, email, servicio, mensaje].includes('')) {
       if ((nombre)==='') {
         setError1(true)
@@ -113,18 +113,18 @@ export default function contacto2() {
 
 
         <div className={styles.input_group}>
-            <input /* required */ type="text" name="Nombre"
-              className={error1 ? styles.input_error : styles.input} value={nombre} onChange= {(e) => setNombre(e.target.value)}/>
+            <input required type="text" name="Nombre"
+              className={styles.input} value={nombre} onChange= {(e) => setNombre(e.target.value)}/>
             <label className={styles.user_label}>Nombre</label>
         </div>
         <div className={styles.input_group}>
-            <input /* required */ type="text" name="Apellidos"
-              className={error2 ? styles.input_error : styles.input} value={apellidos} onChange= {(e) => setApellidos(e.target.value)}/>
+            <input required type="text" name="Apellidos"
+              className={styles.input} value={apellidos} onChange= {(e) => setApellidos(e.target.value)}/>
             <label className={styles.user_label}>Apellidos</label>
         </div>
         <div className={styles.input_group}>
-            <input /* required */ type="email" name="Email" 
-            className={error3 ? styles.input_error : styles.input} value={email} onChange= {(e) => setEmail(e.target.value)}/>
+            <input required type="email" name="Email" 
+            className={styles.input} value={email} onChange= {(e) => setEmail(e.target.value)}/>
             <label className={styles.user_label}>Email</label>
         </div>
         <div className={styles.section_group}>
@@ -132,8 +132,8 @@ export default function contacto2() {
                 name="Servicio" 
                 value={servicio} 
                 onChange= {(e) => setServicio(e.target.value)} 
-                /* required */
-                className={error4 ? styles.section_error : styles.section}>
+                required
+                className={styles.section}>
                   <option value="">-- Elegir Servicio --</option>
                   <option value="retrato">Retrato</option>
                   <option value="evento">Evento</option>
@@ -145,12 +145,12 @@ export default function contacto2() {
         <div className={styles.textarea_group}>
             <textarea type="text" 
                 name="Mensaje" 
-                minLength="10" 
+                // minLength="10" 
                 maxLength="1000"
                 value={mensaje} 
                 onChange= {(e) => setMensaje(e.target.value)} 
-                /* required */
-                className={error5 ? styles.textarea_error : styles.textarea}>
+                required
+                className={styles.textarea}>
             </textarea>
             <label className={styles.user_label}>Mensaje</label>
         </div>

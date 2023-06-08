@@ -476,48 +476,47 @@ export default function precios() {
 
                         <div className={styles.input_group}>
                             <input required type="text" name="Nombre"
-                            className={error1 ? styles.input_error : styles.input} value={nombre} onChange= {(e) => setNombre(e.target.value)}/>
+                            className={styles.input} value={nombre} onChange= {(e) => setNombre(e.target.value)}/>
                             <label className={styles.user_label}>Nombre</label>
                         </div>
                         <div className={styles.input_group}>
                             <input required type="text" name="Apellidos"
-                            className={error2 ? styles.input_error : styles.input} value={apellidos} onChange= {(e) => setApellidos(e.target.value)}/>
+                            className={styles.input} value={apellidos} onChange= {(e) => setApellidos(e.target.value)}/>
                             <label className={styles.user_label}>Apellidos</label>
                         </div>
                         <div className={styles.input_group}>
                             <input required type="email" name="Email" 
-                            className={error3 ? styles.input_error : styles.input} value={email} onChange= {(e) => setEmail(e.target.value)}/>
+                            className={styles.input} value={email} onChange= {(e) => setEmail(e.target.value)}/>
                             <label className={styles.user_label}>Email</label>
                         </div>
                         <div className={styles.section_group}>
                             {digital ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={error4 ? styles.input_error : styles.input} value={'Digital'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Digital'} /* onChange= {(e) => setPack(e.target.value)} *//>
                                     <label className={styles.user_label}>Pack</label>
                                 </>) : ''} 
                             {basico ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={error4 ? styles.input_error : styles.input} value={'Básico'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Básico'} /* onChange= {(e) => setPack(e.target.value)} *//>
                                     <label className={styles.user_label}>Pack</label>
                                 </>) : ''} 
                             {estandar ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={error4 ? styles.input_error : styles.input} value={'Estandar'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Estandar'} /* onChange= {(e) => setPack(e.target.value)} *//>
                                     <label className={styles.user_label}>Pack</label>
                                 </>) : ''} 
                             {premium ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={error4 ? styles.input_error : styles.input} value={'Premium'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Premium'} /* onChange= {(e) => setPack(e.target.value)} *//>
                                     <label className={styles.user_label}>Pack</label>
                                 </>) : ''} 
-                                
-                            <label className={styles.user_label}>Pack</label>
                         </div>
                         <div>
+                            <h1>Extras Adicionales:</h1>
                             {orla ? (
                                 <div className={styles.input_group}>
                                     <input required type="number" name="Orla" 
@@ -571,12 +570,12 @@ export default function precios() {
                         <div className={styles.textarea_group}>
                             <textarea type="text" 
                                 name="Mensaje" 
-                                minLength="10" 
+                                // minLength="10" 
                                 maxLength="1000"
                                 value={mensaje} 
                                 onChange= {(e) => setMensaje(e.target.value)} 
                                 required
-                                className={error5 ? styles.textarea_error : styles.textarea}>
+                                className={styles.textarea}>
                             </textarea>
                             <label className={styles.user_label}>Mensaje</label>
                         </div>
