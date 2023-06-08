@@ -109,6 +109,7 @@ export default function precios() {
     /* Envío de formulario */
     const  handleSubmit = async (e) => {
       e.preventDefault()
+
       //Validación del formulario
       if ([nombre, apellidos, email, pack, mensaje].includes('')) {
         if ((nombre)==='') {
@@ -450,15 +451,14 @@ export default function precios() {
         {/* Código para mostrar el formulario de pedido */}
 
         {mostrar ? (
-            <div className={styles.contenedor}>
+            <div className={styles.contenedor} id='contacto2'>
                 <div className={styles.overlay}>
                     <div className={styles.titulo}>
                         <h1>Solicitud de Pedido</h1>
                     </div>
                     <form 
-                        action="https://formsubmit.co/moisesmoyanoc@gmail.com" 
+                        action="https://formsubmit.co/mmcfotografia01@gmail.com" 
                         method="POST"
-                        id='formulario'
                         className={styles.formulario}>
 
                         {error1||error2||error3||error4||error5 ? (
@@ -491,45 +491,29 @@ export default function precios() {
                         </div>
                         <div className={styles.section_group}>
                             {digital ? (
-                                <select 
-                                    name="Pack" 
-                                    value={pack} 
-                                    onChange= {(e) => setPack(e.target.value)} 
-                                    id='options'
-                                    required
-                                    className={error4 ? styles.section_error : styles.section}>
-                                        <option value="digital">Pack Digital</option>
-                                </select>) : ''} 
+                                <> 
+                                    <input required type="text" name="Pack" 
+                                        className={error4 ? styles.input_error : styles.input} value={'Digital'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                    <label className={styles.user_label}>Pack</label>
+                                </>) : ''} 
                             {basico ? (
-                                <select 
-                                    name="Pack" 
-                                    value={pack} 
-                                    onChange= {(e) => setPack(e.target.value)} 
-                                    id='options'
-                                    required
-                                    className={error4 ? styles.section_error : styles.section}>
-                                        <option value="basico">Pack Básico</option>
-                                </select>) : ''} 
+                                <> 
+                                    <input required type="text" name="Pack" 
+                                        className={error4 ? styles.input_error : styles.input} value={'Básico'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                    <label className={styles.user_label}>Pack</label>
+                                </>) : ''} 
                             {estandar ? (
-                                <select 
-                                    name="Pack" 
-                                    value={pack} 
-                                    onChange= {(e) => setPack(e.target.value)}  
-                                    id='options'
-                                    required
-                                    className={error4 ? styles.section_error : styles.section}>
-                                        <option value="estandar">Pack Estándar</option>
-                                </select>) : ''} 
+                                <> 
+                                    <input required type="text" name="Pack" 
+                                        className={error4 ? styles.input_error : styles.input} value={'Estandar'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                    <label className={styles.user_label}>Pack</label>
+                                </>) : ''} 
                             {premium ? (
-                                <select 
-                                    name="Pack" 
-                                    value={pack}  
-                                    onChange= {(e) => setPack(e.target.value)} 
-                                    id='options'
-                                    required
-                                    className={error4 ? styles.section_error : styles.section}>
-                                        <option value="premium">Pack Premium</option>
-                                </select>) : ''} 
+                                <> 
+                                    <input required type="text" name="Pack" 
+                                        className={error4 ? styles.input_error : styles.input} value={'Premium'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                    <label className={styles.user_label}>Pack</label>
+                                </>) : ''} 
                                 
                             <label className={styles.user_label}>Pack</label>
                         </div>
@@ -597,10 +581,10 @@ export default function precios() {
                             <label className={styles.user_label}>Mensaje</label>
                         </div>
                         <div className={styles.boton}>
-                            <input className={styles.submit} type="submit" name="enviar" onClick={handleSubmit}></input>
+                            <button className={styles.submit} type="submit" onSubmit={handleSubmit}>Enviar</button>
                         </div>
 
-                        <input type="hidden" name="_next" value="http://localhost:3000/#contacto"/>
+                        <input type="hidden" name="_next" value="http://localhost:3000/orlas/#contacto2"/>
                         <input type="hidden" name="_captcha" value="false"></input>
                         <input type="hidden" name="_template" value="box"></input>
                     </form>
@@ -616,15 +600,59 @@ export default function precios() {
 
 {/*
 <select 
-                                name="Pack" 
-                                value={pack} 
-                                onChange= {(e) => setPack(e.target.value)} 
-                                id='options'
-                                required
-                                className={error4 ? styles.section_error : styles.section}>
-                                    <option value="digital">Pack Digital</option>
-                                    <option value="basico">Pack Básico</option>
-                                    <option value="estandar">Pack Estándar</option>
-                                    <option value="premium">Pack Premium</option>
-                            </select>
+    name="Pack" 
+    value={pack} 
+    onChange= {(e) => setPack(e.target.value)} 
+    id='options'
+    required
+    className={error4 ? styles.section_error : styles.section}>
+        <option value="digital">Pack Digital</option>
+        <option value="basico">Pack Básico</option>
+        <option value="estandar">Pack Estándar</option>
+        <option value="premium">Pack Premium</option>
+</select>
 */}
+
+
+
+/* {digital ? (
+        <select 
+            name="Pack" 
+            value={pack} 
+            onChange= {(e) => setPack(e.target.value)} 
+            id='options'
+            required
+            className={error4 ? styles.section_error : styles.section}>
+                <option value="digital">Pack Digital</option>
+        </select>) : ''} 
+    {basico ? (
+        <select 
+            name="Pack" 
+            value={pack} 
+            onChange= {(e) => setPack(e.target.value)} 
+            id='options'
+            required
+            className={error4 ? styles.section_error : styles.section}>
+                <option value="basico">Pack Básico</option>
+        </select>) : ''} 
+    {estandar ? (
+        <select 
+            name="Pack" 
+            value={pack} 
+            onChange= {(e) => setPack(e.target.value)}  
+            id='options'
+            required
+            className={error4 ? styles.section_error : styles.section}>
+                <option value="estandar">Pack Estándar</option>
+        </select>) : ''} 
+    {premium ? (
+        <select 
+            name="Pack" 
+            value={pack}  
+            onChange= {(e) => setPack(e.target.value)} 
+            id='options'
+            required
+            className={error4 ? styles.section_error : styles.section}>
+                <option value="premium">Pack Premium</option>
+        </select>) : ''}  
+    */

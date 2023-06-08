@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from '../styles/Contacto2.module.css'
+import axios from 'axios';
+
 
 export default function contacto2() {
 
@@ -20,8 +22,11 @@ export default function contacto2() {
 
   const  handleSubmit = async (e) =>{
     e.preventDefault()
-    console.log('Holaaa')
 
+
+
+    setExito(false)
+    
     //Validación del formulario
     if ([nombre, apellidos, email, servicio, mensaje].includes('')) {
       if ((nombre)==='') {
@@ -71,7 +76,7 @@ export default function contacto2() {
     setError3(false)
     setError4(false)
     setError5(false)
-    
+
     //Reinicir el form
     setNombre('')
     setApellidos('')
@@ -86,17 +91,14 @@ export default function contacto2() {
     <div className={styles.container}>
       <div className={styles.portada}>
         <div className={styles.overlay}>
-            <h1 id='contacto1'>Contacto</h1>
+            <h1 id='contacto1'>Contacto - Prueba</h1>
         </div>
       </div>
       <div className={styles.margen}>
           <h3>Si tienes alguna pregunta</h3>
-          <h3>por favor no dudes en enviarme un mensaje</h3>
+          <h3>Por favor no dudes en enviarme un mensaje</h3>
       </div>
       <form 
-        action="https://formsubmit.co/mmcfotografia01@gmail.com" 
-        method="POST"
-        autoComplete='off'
         className={styles.formulario}>
 
         {error1||error2||error3||error4||error5 ? (
@@ -155,7 +157,7 @@ export default function contacto2() {
             <label className={styles.user_label}>Mensaje</label>
         </div>
         <div className={styles.boton}>
-            <button className={styles.submit} type="submit" onSubmit={handleSubmit}>Enviar</button>
+            <button id='boton' className={styles.submit} onClick={handleSubmit}>Enviar</button>
         </div>
 
         <input type="hidden" name="_next" value="http://localhost:3000/#contacto1"/>

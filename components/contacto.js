@@ -172,7 +172,7 @@ export default function contacto() {
             </div>
             
             <div className={styles.boton}>
-              <input className={styles.submit} type="submit" name="enviar" onClick={handleSubmit}></input>
+              <button className={styles.submit} type="submit" onSubmit={handleSubmit}>Enviar</button>
             </div>
             <input type="hidden" name="_next" value="http://localhost:3000/#contacto"/>
             <input type="hidden" name="_captcha" value="false"></input>

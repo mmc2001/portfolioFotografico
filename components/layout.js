@@ -4,6 +4,7 @@ import Contacto from '@/components/contacto'
 import Contacto2 from './contacto2'
 import Servicios from './servicios'
 import SobreNosotros from './sobreNosotros'
+import Prueba from './prueba'
 
 export default function Layout (){
   return (
@@ -15,6 +16,7 @@ export default function Layout (){
       <Servicios />
       {/* <Contacto /> */}
       <Contacto2 />
+      <Prueba />
     </>
   )
 }
