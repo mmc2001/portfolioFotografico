@@ -63,8 +63,10 @@
 
 .imagen {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
+    object-fit: contain;
 }
 
 .textos {
@@ -102,6 +104,10 @@
     font-size: 23px;
     line-height: 24px;
     color: #000000;
+}
+
+.margen {
+    margin-top: 10px;
 }
 
 .button {

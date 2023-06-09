@@ -50,7 +50,11 @@ export default function carrousel() {
               <div className={styles.card}>
                 <div className={styles.overlay}></div>
                 <h2>Retrato</h2>
-                <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
+                <p>
+                  A través de la luz, la composición y la atención al detalle, busco resaltar las expresiones, emociones y personalidades. 
+                  Cada retrato es una oportunidad para crear una conexión auténtica y transmitir la esencia de la persona en la imagen. 
+                  Me apasiona capturar momentos genuinos y crear imágenes que inspiren y evocan emociones. Con un enfoque creativo y una visión artística
+                </p>
               </div>
           </div>
       </div>
@@ -75,7 +79,11 @@ export default function carrousel() {
               <div className={styles.card}>
                 <div className={styles.overlay}></div>
                 <h2>Eventos</h2>
-                <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
+                <p>
+                  Capturando los momentos más especiales y memorables en bodas, eventos de empresa, fiestas y graduaciones. 
+                  Con un enfoque creativo y una pasión por contar historias, buscando las emociones, la alegría y la esencia de cada ocasión. 
+                  Desde los detalles más pequeños hasta los momentos más significativos. Recuerdos que perdurarán para siempre.
+                </p>
               </div>
           </div>
       </div>
@@ -100,7 +108,11 @@ export default function carrousel() {
               <div className={styles.card}>
                 <div className={styles.overlay}></div>
                 <h2>Orlas</h2>
-                <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
+                <p>
+                  Cada imagen tiene que inmortalizar este gran logro y la emoción que implica. Representar e inmortalizar esos años
+                  de duro trabajo, sacrificio y perseverancia. En el evento de graduación, documentaré cada momento significativo, 
+                  desde el emocionante momento en el que reciben su diploma y beca hasta las risas y abrazos compartidos con amigos y familiares. 
+                </p>
               </div>
           </div>
       </div>
@@ -125,7 +137,12 @@ export default function carrousel() {
               <div className={styles.card}>
                 <div className={styles.overlay}></div>
                 <h2>Deportes</h2>
-                <p>Lorem ipsum dolor sit amet. Et eaque Quis aut voluptas culpa ut velit earum in consequatur suscipit quo deleniti quos et unde explicabo sed laboriosam repudiandae. Est accusantium repudiandae et consequatur eligendi est autem libero.</p>
+                <p>
+                  Capturan la pasión y la emoción de los momentos más intensos en campeonatos, torneos y eventos deportivos. 
+                  Momentos únicos de competición y rendimiento excepcional, llenas de energía. Desde los goles decisivos en un partido 
+                  de fútbol hasta la velocidad y la destreza de los pilotos en el circuito, mis fotos de deporte transmiten la intensidad 
+                  y la adrenalina del momento.
+                </p>
               </div>
           </div>
       </div>

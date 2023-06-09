@@ -83,7 +83,7 @@
   line-height: 73px;
 
   margin-left: 225px;
-  margin-top: 120px;
+  margin-top: 70px;
 
   color: #FFFFFF;
 }
@@ -94,9 +94,9 @@
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
-  line-height: 28px;
+  line-height: 32px;
   text-align: center;
-  margin-top: 240px;
+  margin-top: 180px;
   padding-left: 60px;
   padding-right: 60px;
 
@@ -107,8 +107,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 768px) {
