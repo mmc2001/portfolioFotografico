@@ -17,8 +17,6 @@ export default function precios() {
     const [error3, setError3] = useState(false);
     const [error4, setError4] = useState(false);
     const [error5, setError5] = useState(false);
-  
-    const [exito, setExito] = useState(false);
 
     const [orla, setOrla] = useState(false);
     const [beca, setBeca] = useState(false);
@@ -197,57 +195,13 @@ export default function precios() {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={digital ? styles.features : (
-                                orla ? `${styles.features} ${styles.disabled}` : 
-                                beca ? `${styles.features} ${styles.disabled}` : 
-                                orlin ? `${styles.features} ${styles.disabled}` :
-                                lote1 ? `${styles.features} ${styles.disabled}` :
-                                lote2 ? `${styles.features} ${styles.disabled}` :
-                                lote3 ? `${styles.features} ${styles.disabled}` :
-                                lote4 ? `${styles.features} ${styles.disabled}` :
-                                styles.features)}>
-                        <li>
-                            <span>+ </span> Orla
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox1}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Beca
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox2}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 1
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox3}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 2
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 3
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox5}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 4
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox6}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
+                    <ul className={styles.features}>
+                        <li> <span>+ </span> Orla </li>
+                        <li> <span>+ </span>Beca </li>
+                        <li> <span>+ </span>Lote 1 </li>
+                        <li> <span>+ </span>Lote 2 </li>
+                        <li> <span>+ </span>Lote 3 </li>
+                        <li> <span>+ </span>Lote 4 </li>
                     </ul><a className={styles.selectPlan} onClick={() => handleSelect('digital')}>Seleccionar Pack</a>
                 </div>
             </div>
@@ -270,50 +224,12 @@ export default function precios() {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={basico ? styles.features : (
-                                orla ? `${styles.features} ${styles.disabled}` : 
-                                beca ? `${styles.features} ${styles.disabled}` : 
-                                orlin ? `${styles.features} ${styles.disabled}` :
-                                lote1 ? `${styles.features} ${styles.disabled}` :
-                                lote2 ? `${styles.features} ${styles.disabled}` :
-                                lote3 ? `${styles.features} ${styles.disabled}` :
-                                lote4 ? `${styles.features} ${styles.disabled}` :
-                                styles.features)}>
-                        <li>
-                            <span>+ </span>Orlín
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox7}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 1
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox3}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 2
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 3
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 4
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox5}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
+                    <ul className={styles.features}>
+                        <li> <span>+ </span>Orlín </li>
+                        <li> <span>+ </span>Lote 1 </li>
+                        <li> <span>+ </span>Lote 2 </li>
+                        <li> <span>+ </span>Lote 3 </li>
+                        <li> <span>+ </span>Lote 4 </li>
                     </ul><a className={styles.selectPlan} onClick={() => handleSelect('basico')}>Seleccionar Pack</a>
                 </div>
             </div>
@@ -337,50 +253,12 @@ export default function precios() {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={estandar ? styles.features : (
-                                orla ? `${styles.features} ${styles.disabled}` : 
-                                beca ? `${styles.features} ${styles.disabled}` : 
-                                orlin ? `${styles.features} ${styles.disabled}` :
-                                lote1 ? `${styles.features} ${styles.disabled}` :
-                                lote2 ? `${styles.features} ${styles.disabled}` :
-                                lote3 ? `${styles.features} ${styles.disabled}` :
-                                lote4 ? `${styles.features} ${styles.disabled}` :
-                                styles.features)}>
-                        <li>
-                            <span>+ </span>Orlín
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox7}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 1
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox3}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 2
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 3
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 4
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox5}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
+                    <ul className={styles.features}>
+                        <li> <span>+ </span>Orlín </li>
+                        <li> <span>+ </span>Lote 1 </li>
+                        <li> <span>+ </span>Lote 2 </li>
+                        <li> <span>+ </span>Lote 3 </li>
+                        <li> <span>+ </span>Lote 4 </li>
                     </ul><a className={styles.selectPlan} onClick={() => handleSelect('estandar')}>Seleccionar Pack</a>
                 </div>
             </div>
@@ -404,45 +282,14 @@ export default function precios() {
                         <li>✔ Archivos en Formato Digital</li>
                     </ul>
                 </div>
-                <div className={styles.titleContainer}>
+                {/* <div className={styles.titleContainer}> (2º OPCIÓN DE ESTILOS)*/}
+                <div className={styles.infoContainer}>
                     <div className={`${styles.p} ${styles.desc}`}><em>Extras Disponibles: </em></div>
-                    <ul className={premium ? styles.features : (
-                                orla ? `${styles.features} ${styles.disabled}` : 
-                                beca ? `${styles.features} ${styles.disabled}` : 
-                                orlin ? `${styles.features} ${styles.disabled}` :
-                                lote1 ? `${styles.features} ${styles.disabled}` :
-                                lote2 ? `${styles.features} ${styles.disabled}` :
-                                lote3 ? `${styles.features} ${styles.disabled}` :
-                                lote4 ? `${styles.features} ${styles.disabled}` :
-                                styles.features)}>
-                        <li>
-                            <span>+ </span>Lote 1
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox3}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 2
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 3
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox4}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
-                        <li>
-                            <span>+ </span>Lote 4
-                            <label className={styles.container}>
-                                <input type="checkbox" onClick={handleCheckbox5}/>
-                                <div className={styles.checkmark}></div>
-                            </label>
-                        </li>
+                    <ul className={styles.features}>
+                        <li> <span>+ </span>Lote 1 </li>
+                        <li> <span>+ </span>Lote 2 </li>
+                        <li> <span>+ </span>Lote 3 </li>
+                        <li> <span>+ </span>Lote 4 </li>
                     </ul><a className={styles.selectPlan} onClick={() => handleSelect('premium')}>Seleccionar Pack</a>
                 </div>
             </div>
@@ -460,19 +307,6 @@ export default function precios() {
                         action="https://formsubmit.co/mmcfotografia01@gmail.com" 
                         method="POST"
                         className={styles.formulario}>
-
-                        {error1||error2||error3||error4||error5 ? (
-                        <div>
-                            <h4 className={styles.mensaje_error}>Todos los campo son obligatorios</h4>
-                        </div>
-                        ) : ''}
-
-                        {exito ? (
-                        <div>
-                            <h4 className={styles.mensaje_exitoso}>Correo enviado correctamente</h4>
-                        </div>
-                        ) : ''}
-
 
                         <div className={styles.input_group}>
                             <input required type="text" name="Nombre"
@@ -493,30 +327,193 @@ export default function precios() {
                             {digital ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={styles.input} value={'Digital'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Digital'} onChange= {(e) => setPack(e.target.value)}/>
                                     <label className={styles.user_label}>Pack</label>
+
+                                    <div>
+                                        <h1>Extras Adicionales:</h1>
+                                        <ul className={styles.extras}>
+                                                <li>
+                                                    <span>+ </span> Orla
+                                                    <label className={styles.container}>
+                                                        <input type="checkbox" onClick={handleCheckbox1}/>
+                                                        <div className={styles.checkmark}></div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <span>+ </span>Beca
+                                                    <label className={styles.container}>
+                                                        <input type="checkbox" onClick={handleCheckbox2}/>
+                                                        <div className={styles.checkmark}></div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <span>+ </span>Lote 1
+                                                    <label className={styles.container}>
+                                                        <input type="checkbox" onClick={handleCheckbox3}/>
+                                                        <div className={styles.checkmark}></div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <span>+ </span>Lote 2
+                                                    <label className={styles.container}>
+                                                        <input type="checkbox" onClick={handleCheckbox4}/>
+                                                        <div className={styles.checkmark}></div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <span>+ </span>Lote 3
+                                                    <label className={styles.container}>
+                                                        <input type="checkbox" onClick={handleCheckbox5}/>
+                                                        <div className={styles.checkmark}></div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <span>+ </span>Lote 4
+                                                    <label className={styles.container}>
+                                                        <input type="checkbox" onClick={handleCheckbox6}/>
+                                                        <div className={styles.checkmark}></div>
+                                                    </label>
+                                                </li>
+                                        </ul>
+                                    </div>
                                 </>) : ''} 
                             {basico ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={styles.input} value={'Básico'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Básico'} onChange= {(e) => setPack(e.target.value)}/>
                                     <label className={styles.user_label}>Pack</label>
+
+                                    <div>
+                                        <h1>Extras Adicionales:</h1>
+                                        <ul className={styles.extras}>
+                                            <li>
+                                                <span>+ </span>Orlín
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox7}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 1
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox3}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 2
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox4}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 3
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox5}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 4
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox6}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </>) : ''} 
                             {estandar ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={styles.input} value={'Estandar'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Estandar'} onChange= {(e) => setPack(e.target.value)}/>
                                     <label className={styles.user_label}>Pack</label>
+
+                                    <div>
+                                        <h1>Extras Adicionales:</h1>
+                                        <ul className={styles.extras}>
+                                            <li>
+                                                <span>+ </span>Orlín
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox7}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 1
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox3}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 2
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox4}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 3
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox5}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 4
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox6}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </>) : ''} 
                             {premium ? (
                                 <> 
                                     <input required type="text" name="Pack" 
-                                        className={styles.input} value={'Premium'} /* onChange= {(e) => setPack(e.target.value)} *//>
+                                        className={styles.input} value={'Premium'} onChange= {(e) => setPack(e.target.value)}/>
                                     <label className={styles.user_label}>Pack</label>
+                                    
+                                    <div>
+                                        <h1>Extras Adicionales:</h1>
+                                        <ul className={styles.extras}>
+                                            <li>
+                                                <span>+ </span>Lote 1
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox3}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 2
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox4}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 3
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox5}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <span>+ </span>Lote 4
+                                                <label className={styles.container}>
+                                                    <input type="checkbox" onClick={handleCheckbox6}/>
+                                                    <div className={styles.checkmark}></div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </>) : ''} 
                         </div>
                         <div>
-                            <h1>Extras Adicionales:</h1>
                             {orla ? (
                                 <div className={styles.input_group}>
                                     <input required type="number" name="Orla" 
@@ -574,7 +571,6 @@ export default function precios() {
                                 maxLength="1000"
                                 value={mensaje} 
                                 onChange= {(e) => setMensaje(e.target.value)} 
-                                required
                                 className={styles.textarea}>
                             </textarea>
                             <label className={styles.user_label}>Mensaje</label>

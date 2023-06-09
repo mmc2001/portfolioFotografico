@@ -1,12 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Image from 'next/image'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styles from '../styles/servicios.module.css'
+
 import page from '../pages/retratos'
 
 export default function servicios() {
+
+  useEffect(() => {
+      AOS.init({ once: true }); 
+  }, []);
+
   return (
     <>
-    <div className={styles.contenedor}>
+    <div className={styles.contenedor} data-aos="fade-up">
         <h2>Servicios</h2>
         <div className={styles.cards}>
           <a href='./retratos'>

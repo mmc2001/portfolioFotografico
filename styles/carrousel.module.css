@@ -129,6 +129,18 @@
     height: 400px;
     width: 100%;
   }
+  .f_izq {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .f_izq img {
+    display: none;
+  }
+  .f_drc {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .f_drc img {
+    display: none;
+  }
   .f_izq:hover {
     opacity: 0;
   }

@@ -81,11 +81,11 @@
     color: #bd1818;
 }
 
-.formulario  input:required:valid,
+/* .formulario  input:required:valid,
 .formulario  textarea:required:valid,
 .formulario  select:required:valid {
-    border-color: #26e56f; /* Cambia el color del borde cuando se completa correctamente */
-}
+    border-color: #26e56f;
+}*/
 
 .formulario h4.mensaje_error{
     width: 40vw;
@@ -287,6 +287,15 @@
     .submit {
         width: 50vw;
         padding: 0.5em 0em;
+    }
+}
+
+@media (max-width: 890px) {
+    .textarea {
+        width: 80vw;
+    }
+    .submit {
+        width: 80vw;
     }
 }
 

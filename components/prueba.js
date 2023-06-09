@@ -22,8 +22,6 @@ export default function contacto2() {
   const  handleSubmit = async (e) =>{
     e.preventDefault()
 
-
-
     setExito(false)
     
     //Validación del formulario

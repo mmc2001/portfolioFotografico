@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 /* import ModalImage from 'react-modal-image' */
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styles from '../styles/trabajos.module.css'
 
 export default function sobreMi() {
@@ -23,8 +25,12 @@ export default function sobreMi() {
       setIsOpen(true);
     };
 
+    useEffect(() => {
+      AOS.init({ once: true }); 
+    }, []);
+
   return (
-    <div className={styles.contenedor}>
+    <div className={styles.contenedor} data-aos="fade-up">
         <h2>Trabajos de Ejemplo</h2>
         <div className={styles.galeria}>
           

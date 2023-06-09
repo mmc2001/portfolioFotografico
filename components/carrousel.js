@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
-import Image from 'next/image'
-import styles from '../styles/carrousel.module.css'
+import React, {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import styles from '../styles/carrousel.module.css'
 
 
 export default function carrousel() {
@@ -23,6 +25,10 @@ export default function carrousel() {
   const goToNextCard = () => {
     setCurrentCard((prevCard) => (prevCard === images.length - 1 ? 0 : prevCard + 1));
   };
+
+  useEffect(() => {
+      AOS.init({ once: true }); 
+  }, []);
 
   if(router.pathname === '/retratos'){
     return (

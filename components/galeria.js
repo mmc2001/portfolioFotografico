@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styles from '../styles/galeria.module.css'
 
 export default function sobreMi() {
@@ -21,6 +23,10 @@ export default function sobreMi() {
       setPhotoIndex(index);
       setIsOpen(true);
     };
+
+    useEffect(() => {
+      AOS.init({ once: true }); 
+    }, []);
 
   return (
     <div className={styles.contenedor}>

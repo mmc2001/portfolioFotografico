@@ -17,7 +17,7 @@ export default function Footer() {
 
                   <Link href="#servicios">Servicios</Link>
 
-                  <Link href="#contacto">Contacto</Link>
+                  <Link href="#contacto1">Contacto</Link>
               </nav>
               <Link href={'/'}>
                       <Image className={styles.logo} src="/logo/logo-foto.svg" width={140} height={40} alt='imagen logotipo' />

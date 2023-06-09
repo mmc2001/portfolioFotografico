@@ -1,5 +1,7 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styles from '../styles/Contacto2.module.css'
 
 export default function contacto2() {
@@ -82,8 +84,12 @@ export default function contacto2() {
     setExito(true)
   }
 
+  useEffect(() => {
+    AOS.init({ once: true }); 
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-aos="fade-up">
       <div className={styles.portada}>
         <div className={styles.overlay}>
             <h1 id='contacto1'>Contacto</h1>
@@ -112,22 +118,22 @@ export default function contacto2() {
         ) : ''}
 
 
-        <div className={styles.input_group}>
+        <div className={styles.input_group} data-aos="fade-right">
             <input required type="text" name="Nombre"
               className={styles.input} value={nombre} onChange= {(e) => setNombre(e.target.value)}/>
             <label className={styles.user_label}>Nombre</label>
         </div>
-        <div className={styles.input_group}>
+        <div className={styles.input_group} data-aos="fade-right">
             <input required type="text" name="Apellidos"
               className={styles.input} value={apellidos} onChange= {(e) => setApellidos(e.target.value)}/>
             <label className={styles.user_label}>Apellidos</label>
         </div>
-        <div className={styles.input_group}>
+        <div className={styles.input_group} data-aos="fade-right">
             <input required type="email" name="Email" 
             className={styles.input} value={email} onChange= {(e) => setEmail(e.target.value)}/>
             <label className={styles.user_label}>Email</label>
         </div>
-        <div className={styles.section_group}>
+        <div className={styles.section_group} data-aos="fade-right">
             <select 
                 name="Servicio" 
                 value={servicio} 
@@ -142,7 +148,7 @@ export default function contacto2() {
             </select>  
             <label className={styles.user_label}>Servicio</label>
         </div>
-        <div className={styles.textarea_group}>
+        <div className={styles.textarea_group} data-aos="fade-right">
             <textarea type="text" 
                 name="Mensaje" 
                 // minLength="10" 
@@ -154,7 +160,7 @@ export default function contacto2() {
             </textarea>
             <label className={styles.user_label}>Mensaje</label>
         </div>
-        <div className={styles.boton}>
+        <div className={styles.boton} data-aos="fade-right">
             <button className={styles.submit} type="submit" onSubmit={handleSubmit}>Enviar</button>
         </div>
 

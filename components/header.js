@@ -44,7 +44,7 @@ export default function Header() {
                       </ul>
                   </li>
 
-                  <Link className={ router.pathname === '/#contacto' ? styles.active : ''} href="./#contacto">Contacto</Link>
+                  <Link className={ router.pathname === '/#contacto1' ? styles.active : ''} href="./#contacto1">Contacto</Link>
 
                 </nav>
                 <nav className={styles.navegacion2}>

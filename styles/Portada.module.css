@@ -232,10 +232,23 @@
     }
 }
 
+@media (min-width: 1000px) {
+    .contenedor {
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contenedor {
+        margin-top: 8rem;
+    }
+}
+
 @media (max-width: 768px) {
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
         height: 86vh;
+        height: 90vh;
         background-position-x: -220px;
     }
     .container {
@@ -278,13 +291,16 @@
     .botones .button2 {
         font-size: 26px;
     }
+    .contenedor {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 460px) {
     .inicio {
         background: #fff url(/background.png) center center/cover no-repeat;
         background-position-x: -210px;
-        height: 62vh;
+        height: 66vh;
         width: 100vw;
 
     }
@@ -304,6 +320,7 @@
     }
     .contenedor {
         margin-top: 2rem;
+        opacity: 1;
     }
     .text {
         margin-top: 50px;
@@ -334,7 +351,7 @@
 
 @media (max-width: 390px) {
     .inicio {
-        height: 62vh;
+        height: 60vh;
     }
     .container {
         padding: 0.75rem; 
