@@ -44,7 +44,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className={styles.contenedor}>
      <Head>
         <title>{`Portolio - ${'title'}`}</title>
         <meta name="description" content={'description'} />
@@ -66,6 +66,6 @@ export default function Home() {
       )}
 
       <Footer/>
-    </>
+    </div>
   )
 }

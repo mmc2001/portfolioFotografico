@@ -50,10 +50,15 @@ export default function carrousel() {
               <div className={styles.card}>
                 <div className={styles.overlay}></div>
                 <h2>Retrato</h2>
-                <p>
+                {/* <p>
                   A través de la luz, la composición y la atención al detalle, busco resaltar las expresiones, emociones y personalidades. 
                   Cada retrato es una oportunidad para crear una conexión auténtica y transmitir la esencia de la persona en la imagen. 
                   Me apasiona capturar momentos genuinos y crear imágenes que inspiren y evocan emociones. Con un enfoque creativo y una visión artística
+                </p> */}
+                <p>
+                Realizamos sesiones individuales, donde capturamos tu esencia y personalidad única. También ofrecemos sesiones para parejas, capturando 
+                la conexión y el amor compartido. Si deseas inmortalizar momentos especiales con tus amigos o familiares, nuestras sesiones en grupo son perfectas 
+                para ti. Además, estamos abiertos a colaboraciones creativas y proyectos especiales. 
                 </p>
               </div>
           </div>

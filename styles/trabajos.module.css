@@ -1,6 +1,6 @@
 .contenedor {
   margin-top: 60px;
-  width: 100%;
+  width: 100vw;
   box-sizing: border-box;
   display: grid;
   align-items: center;
