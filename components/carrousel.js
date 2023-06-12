@@ -56,9 +56,9 @@ export default function carrousel() {
                   Me apasiona capturar momentos genuinos y crear imágenes que inspiren y evocan emociones. Con un enfoque creativo y una visión artística
                 </p> */}
                 <p>
-                Realizamos sesiones individuales, donde capturamos tu esencia y personalidad única. También ofrecemos sesiones para parejas, capturando 
-                la conexión y el amor compartido. Si deseas inmortalizar momentos especiales con tus amigos o familiares, nuestras sesiones en grupo son perfectas 
-                para ti. Además, estamos abiertos a colaboraciones creativas y proyectos especiales. 
+                  Realizamos sesiones individuales, donde capturamos tu esencia y personalidad única. También ofrecemos sesiones para parejas, capturando 
+                  la conexión y el amor compartido. Si deseas inmortalizar momentos especiales con tus amigos o familiares, nuestras sesiones en grupo son perfectas 
+                  para ti. Además, estamos abiertos a colaboraciones creativas y proyectos especiales. 
                 </p>
               </div>
           </div>

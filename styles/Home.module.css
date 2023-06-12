@@ -76,7 +76,7 @@
   visibility: visible;
   position: fixed;
   bottom: 10rem;
-  right: 8rem;
+  right: 4rem;
   animation: buttonFadeIn 1s ease-in-out;
 }
 .mostrar img {
