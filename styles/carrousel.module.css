@@ -30,11 +30,15 @@
 .flechas {
   height: 518px;
   width: 100%;
-  top: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  z-index: 2; 
   /* padding: 20px; */
 }
 .f_izq {
@@ -44,10 +48,7 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-}
-.f_izq:hover {
-  background-color: rgb(28, 28, 28, 0.4);
-  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.15);
 }
 .f_drc {
   height: 100%;
@@ -56,10 +57,7 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-}
-.f_drc:hover {
-  background-color: rgb(28, 28, 28, 0.4);
-  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .card {
@@ -128,24 +126,6 @@
   .flechas {
     height: 400px;
     width: 100%;
-  }
-  .f_izq {
-    background: rgba(0, 0, 0, 0.15);
-  }
-  .f_izq img {
-    display: none;
-  }
-  .f_drc {
-    background: rgba(0, 0, 0, 0.15);
-  }
-  .f_drc img {
-    display: none;
-  }
-  .f_izq:hover {
-    opacity: 0;
-  }
-  .f_drc:hover {
-    opacity: 0;
   }
   .card {
     height: 400px;
