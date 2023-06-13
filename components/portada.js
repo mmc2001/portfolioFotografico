@@ -5,7 +5,8 @@ import styles from "../styles/Portada.module.css"
 export default function portada() {
   return (
     <>
-      <div className={styles.inicio}>
+      <div className={`${styles.inicio} ${styles.overlay}`}>
+      <div className={styles.overlay}>
         <div className={styles.container}>
           <div className={styles.texto}>
             <h1>Portfolio <br/> Fotográfico</h1>
@@ -24,6 +25,7 @@ export default function portada() {
             <span className={styles.text}>Scroll Down</span>
           </div>
         </div>
+      </div>
       </div>
     </>
   )
