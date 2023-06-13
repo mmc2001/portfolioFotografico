@@ -57,3 +57,7 @@ main {
 .titulo{
   margin-bottom: 1em;
 }
+
+html, body {
+  overflow: overlay;
+}
