@@ -10,33 +10,55 @@ export default function carrousel() {
   
   const router = useRouter()
 
-  const images = [
-    '/mujer.jpeg',
-    '/hombre1.jpeg',
-    '/hombre2.jpeg'
+  const imagenes1 = [
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592313/moyanofotografia/retrato/retrato-94_iyubzc.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592322/moyanofotografia/retrato/retrato-135_asmtgv.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592319/moyanofotografia/retrato/retrato-122_r4gvkt.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592310/moyanofotografia/retrato/retrato-81_jity5v.jpg'
   ];
 
-  const [currentCard, setCurrentCard] = useState(0);
+  const imagenes2 = [
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592313/moyanofotografia/retrato/retrato-94_iyubzc.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592322/moyanofotografia/retrato/retrato-135_asmtgv.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592319/moyanofotografia/retrato/retrato-122_r4gvkt.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592310/moyanofotografia/retrato/retrato-81_jity5v.jpg'
+  ];
 
-  const goToPreviousCard = () => {
-    setCurrentCard((prevCard) => (prevCard === 0 ? images.length - 1 : prevCard - 1));
-  };
+  const imagenes3 = [
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592313/moyanofotografia/retrato/retrato-94_iyubzc.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592322/moyanofotografia/retrato/retrato-135_asmtgv.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592319/moyanofotografia/retrato/retrato-122_r4gvkt.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592310/moyanofotografia/retrato/retrato-81_jity5v.jpg'
+  ];
 
-  const goToNextCard = () => {
-    setCurrentCard((prevCard) => (prevCard === images.length - 1 ? 0 : prevCard + 1));
-  };
-
-  useEffect(() => {
-      AOS.init({ once: true }); 
-  }, []);
+  const imagenes4 = [
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686670633/moyanofotografia/deporte/f%C3%BAtbol/f%C3%BAtbol-88_kluzmw.jpg',
+    /* 'https://res.cloudinary.com/dmy4uufym/image/upload/v1686670602/moyanofotografia/deporte/f%C3%BAtbol/f%C3%BAtbol-60_gtfbpy.jpg', */
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592319/moyanofotografia/retrato/retrato-122_r4gvkt.jpg',
+    'https://res.cloudinary.com/dmy4uufym/image/upload/v1686592310/moyanofotografia/retrato/retrato-81_jity5v.jpg'
+  ];
 
   if(router.pathname === '/retratos'){
+    const [currentCard, setCurrentCard] = useState(0);
+
+    const goToPreviousCard = () => {
+      setCurrentCard((prevCard) => (prevCard === 0 ? imagenes1.length - 1 : prevCard - 1));
+    };
+
+    const goToNextCard = () => {
+      setCurrentCard((prevCard) => (prevCard === imagenes1.length - 1 ? 0 : prevCard + 1));
+    };
+
+    useEffect(() => {
+        AOS.init({ once: true }); 
+    }, []);
+
     return (
       <div>
           <div className={styles.contenedor}>  
               <div className={styles.contenedorCarrousel}>
                
-                <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
+                <Image className={styles.imagenTarjeta} src={imagenes1[currentCard]} alt="Tarjeta" width={300} height={200}/>
                
                 <div className={styles.flechas}>
                   <div className={styles.f_izq} onClick={goToPreviousCard}>
@@ -65,12 +87,25 @@ export default function carrousel() {
       </div>
     )
   } else if (router.pathname === '/eventos'){
+    const [currentCard, setCurrentCard] = useState(0);
+
+    const goToPreviousCard = () => {
+      setCurrentCard((prevCard) => (prevCard === 0 ? imagenes2.length - 1 : prevCard - 1));
+    };
+
+    const goToNextCard = () => {
+      setCurrentCard((prevCard) => (prevCard === imagenes2.length - 1 ? 0 : prevCard + 1));
+    };
+
+    useEffect(() => {
+        AOS.init({ once: true }); 
+    }, []);
     return (
       <div>
           <div className={styles.contenedor}>  
               <div className={styles.contenedorCarrousel}>
                
-                  <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
+                  <Image className={styles.imagenTarjeta} src={imagenes2[currentCard]} alt="Tarjeta" width={300} height={200}/>
                
                 <div className={styles.flechas}>
                   <div className={styles.f_izq} onClick={goToPreviousCard}>
@@ -81,7 +116,7 @@ export default function carrousel() {
                   </div>
                 </div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card2}>
                 <div className={styles.overlay}></div>
                 <h2>Eventos</h2>
                 <p>
@@ -94,12 +129,25 @@ export default function carrousel() {
       </div>
     )
   } else if (router.pathname === '/orlas'){
+    const [currentCard, setCurrentCard] = useState(0);
+
+    const goToPreviousCard = () => {
+      setCurrentCard((prevCard) => (prevCard === 0 ? imagenes3.length - 1 : prevCard - 1));
+    };
+
+    const goToNextCard = () => {
+      setCurrentCard((prevCard) => (prevCard === imagenes3.length - 1 ? 0 : prevCard + 1));
+    };
+
+    useEffect(() => {
+        AOS.init({ once: true }); 
+    }, []);
     return (
       <div>
           <div className={styles.contenedor}>  
               <div className={styles.contenedorCarrousel}>
                
-                  <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
+                  <Image className={styles.imagenTarjeta} src={imagenes3[currentCard]} alt="Tarjeta" width={300} height={200}/>
                
                 <div className={styles.flechas}>
                   <div className={styles.f_izq} onClick={goToPreviousCard}>
@@ -110,7 +158,7 @@ export default function carrousel() {
                   </div>
                 </div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card3}>
                 <div className={styles.overlay}></div>
                 <h2>Orlas</h2>
                 <p>
@@ -123,12 +171,25 @@ export default function carrousel() {
       </div>
     )
   } else if (router.pathname === '/deporte'){
+    const [currentCard, setCurrentCard] = useState(0);
+
+    const goToPreviousCard = () => {
+      setCurrentCard((prevCard) => (prevCard === 0 ? imagenes4.length - 1 : prevCard - 1));
+    };
+
+    const goToNextCard = () => {
+      setCurrentCard((prevCard) => (prevCard === imagenes4.length - 1 ? 0 : prevCard + 1));
+    };
+
+    useEffect(() => {
+        AOS.init({ once: true }); 
+    }, []);
     return (
       <div>
           <div className={styles.contenedor}>  
               <div className={styles.contenedorCarrousel}>
                
-                  <Image className={styles.imagenTarjeta} src={images[currentCard]} alt="Tarjeta" width={300} height={200}/>
+                  <Image className={styles.imagenTarjeta} src={imagenes4[currentCard]} alt="Tarjeta" width={300} height={200}/>
                
                 <div className={styles.flechas}>
                   <div className={styles.f_izq} onClick={goToPreviousCard}>
@@ -139,7 +200,7 @@ export default function carrousel() {
                   </div>
                 </div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card4}>
                 <div className={styles.overlay}></div>
                 <h2>Deportes</h2>
                 <p>

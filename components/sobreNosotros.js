@@ -20,7 +20,7 @@ export default function sobreNosotros() {
             </div>
             <div className={styles.bloque}>
                 <div className={styles.imagen} data-aos="fade-right">
-                    <Image src={"/retrato.jpeg"} width={672} height={382} alt='Imagen de nuestro trabajo'/>
+                    <Image src={"https://res.cloudinary.com/dmy4uufym/image/upload/v1686672238/moyanofotografia/eventos/boda/boda-05_mh1g5f.jpg"} width={672} height={382} alt='Imagen de nuestro trabajo'/>
                 </div>
                 <div className={styles.textos} data-aos="fade-left">
                     <h3>Mi Trabajo</h3>

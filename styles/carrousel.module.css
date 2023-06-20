@@ -24,7 +24,9 @@
 
 .imagenTarjeta{
   height: 100%;
-  width: auto;
+  width: 100%;
+  object-fit: cover;
+  /* width: auto; */
 }
 
 .flechas {
@@ -62,7 +64,40 @@
 
 .card {
   position: relative;
-  background-image: url('/retrato.jpeg');
+  background-image: url('https://res.cloudinary.com/dmy4uufym/image/upload/v1686592312/moyanofotografia/retrato/retrato-87_efjwtx.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 -160px;
+  background-size: cover;
+  backdrop-filter: blur(200px);
+  background-color: rgba(48, 48, 48, 0.6);
+  width: 650px;
+  height: 518px;
+}
+.card2 {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmy4uufym/image/upload/v1686672239/moyanofotografia/eventos/boda/boda-07_evy3by.jpg');
+  background-repeat: no-repeat;
+  background-position: -120px 0;
+  background-size: cover;
+  backdrop-filter: blur(200px);
+  background-color: rgba(48, 48, 48, 0.6);
+  width: 650px;
+  height: 518px;
+}
+.card3 {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmy4uufym/image/upload/v1686672239/moyanofotografia/eventos/boda/boda-07_evy3by.jpg');
+  background-repeat: no-repeat;
+  background-position: -120px 0;
+  background-size: cover;
+  backdrop-filter: blur(200px);
+  background-color: rgba(48, 48, 48, 0.6);
+  width: 650px;
+  height: 518px;
+}
+.card4 {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dmy4uufym/image/upload/v1686670616/moyanofotografia/deporte/f%C3%BAtbol/f%C3%BAtbol-79_tb8yp0.jpg');
   background-repeat: no-repeat;
   background-position: -120px 0;
   background-size: cover;
@@ -72,7 +107,7 @@
   height: 518px;
 }
 
-.card h2{
+.card h2, .card2 h2, .card3 h2, .card4 h2{
   position: absolute;
   font-family: var(--fuente);
   font-style: normal;
@@ -86,7 +121,7 @@
   color: #FFFFFF;
 }
 
-.card p{
+.card p, .card2 p, .card3 p, .card4 p{
   position: absolute;
   font-family: var(--fuente);
   font-style: normal;
