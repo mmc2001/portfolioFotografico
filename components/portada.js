@@ -13,7 +13,7 @@ export default function portada() {
             {/* <span>moyanofotografia</span> */}
           </div>
           <div className={styles.botones}>
-            <Link href={"/#contacto"}><button className={styles.button1}>Contactar</button></Link>
+            <Link href={"/#contacto1"}><button className={styles.button1}>Contactar</button></Link>
             <Link href={"/#servicios"}><button className={styles.button2}>Servicios</button></Link>
           </div>
         </div>

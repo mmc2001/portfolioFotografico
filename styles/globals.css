@@ -26,9 +26,9 @@ body {
   line-height: 1.5;
   max-width: 2560px;
   /* max-height: 2160px; */
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 auto;
   overflow-y: scroll;
 }
 

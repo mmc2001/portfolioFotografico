@@ -35,7 +35,7 @@ export default function sobreNosotros() {
                         la personalidad única de cada persona, obteniendo recuerdos que no se queden en el olvido.
                     </p>    
                     <div>
-                        <Link href={"/#contacto"}><button className={styles.button}>Contactar</button></Link>
+                        <Link href={"/#contacto1"}><button className={styles.button}>Contactar</button></Link>
                     </div>
                 </div>
             </div>
